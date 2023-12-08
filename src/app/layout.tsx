@@ -5,6 +5,7 @@ import "./globals.css";
 // import Navbar from "@/components/Navbar";
 import StarsCanvas from "@/components/StarBackground";
 import { Navbar } from "@/components/Navbar";
+import LeftSide from "@/components/LeftSide";
 // import Footer from "@/components/main/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,7 +27,13 @@ export default function RootLayout({
       >
         <StarsCanvas />
         <Navbar />
-        {children}
+        <div className="w-full h-[88vh] lg:flex items-center gap- justify-between">
+          <div className="hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0">
+            <LeftSide />
+          </div>
+          {children}
+          <div className=""></div>
+        </div>
         {/* <Footer /> */}
       </body>
     </html>

@@ -6,7 +6,7 @@ const Hero = () => {
     <div className='p-5 h-screen  flex flex-col items-col items-center justify-center mx-auto w-full text-white text-2xl lg:text-4xl font-medium leading-8 lg:leading-[2.5rem]'>
       <h1 className=''>Hello, I&apos;m <span className='text-blue-800'>Oyedele Jeremiah.</span></h1>
       <p className="">I&apos;m a front-end developer.</p>
-      <button className='border-2 py-[0.8rem] border-whit px-5 font-[300] mt-4 gap-2 flex items-center text-sm lg:text-xl cursor-pointer'>View my work <span><FaLongArrowAltRight className=''/></span></button>
+      <button className='border-2 py-[0.8rem] border-whit hover:bg-[#F6E35D] px-5 font-[300] mt-4 gap-2 flex items-center text-sm lg:text-xl cursor-pointer'>View my work <span><FaLongArrowAltRight className=''/></span></button>
       {/* <p className="text-center flex justify-center gap-3 items-center mx-auto">About <span className="text-[#7042f861]">Me</span></p> */}
 
     </div>

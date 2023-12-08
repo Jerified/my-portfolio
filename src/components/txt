@@ -1,0 +1,129 @@
+// import regraph from 'regraph'
+const Chart = dynamic(() => import('react-apexcharts'),{ssr: false})
+
+const data = {
+  series: [
+    {
+      data: [90, 80, 70, 60, 50, 40, 30, 20]
+    },
+    // colors: ['#fff']
+  ],
+  options: {
+    chart: {
+      type: 'bar',
+      height: 300,
+    },
+    // colors: ['#f4E3'],
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        columnWidth: '100%'
+      }
+    },
+    dataLabels: {
+      enabled: true,
+      textAnchor: 'start',
+      style: {
+        fontSize: '20px'
+      },
+      // background: {
+      //   enabled: true,
+      //   foreColor: '#fff',
+      //   borderColor: '#fff',
+      //   colors: ['#60A5FA'],
+      //   borderRadius: 2
+      // }
+    },
+    grid: {
+      show: false,
+      strokeDashArray: 0,
+      // borderColor: '#fff',
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+      // row: {
+      //   colors: ['#fff']
+      // },
+      padding: {
+        bottom: 5
+      }
+    },
+    xaxis: {
+      categories: [
+        'CSS',
+        'HTML',
+        'React',
+        'JavaScript',
+        'typeScript',
+        'Nextjs',
+        'UI Design',
+        'Sketch'
+      ],
+      axisBorder: {
+      show: false
+      },
+      labels: {
+        // background: '#F9FAFB',
+        colors: '#111827',
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      axisBorder: {
+        show: false
+      },
+      labels: {
+        show: true
+      }
+    },
+    // grid: {
+    //   row: {
+    //     colors: ['#fff']
+    //   }
+    // },
+    // colors: ['#60A5FA'],
+    fill: {
+      colors: [function ({ value, seriesIndex, w }: any) {
+        if(value < 100) {
+          return 
+            '#60FA'
+            // type: 'gradient',
+            // gradient: {
+            //   shade: 'dark',
+            //   type: 'vertical',
+            //   shadeIntensity: 0.5,
+            //   gradientToColors: ['#FDD835']
+            // }
+          } else {
+            return '#60A4F7'
+            // w.config.colors[seriesIndex]
+          }
+        }
+      ],
+      // pattern: {
+      //   style: 'horizontalLines'
+      // },
+      // background: {
+      //   enabled: true,
+      //   foreColor: "#FFF",
+      //   colors: ["#FFF","#FFF","#FFF","#FFF","#FFF","#FFF","#FFF","#FFF"],
+      //   borderWidth: 1,
+      //   borderColor: '#fff',
+      //   borderRadius: 2,
+      //   opacity: 0.9
+      // },
+      // colors: ['#255']
+    }
+  },
+  // theme: {
+  //   mode: 'light',
+  //   monochrome: {
+  //     color: '#255'
+  //   }
+  // }
+}
