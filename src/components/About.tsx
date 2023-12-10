@@ -20,7 +20,7 @@ const skills = [
 
 const Hero = () => {
   return (
-    <div className=' text-white px-4 max-w-6xl mx-auto'>
+    <div className=' text-white max-w-6xl mx-auto'>
       <div className="flex flex-col items-center gap-4 justify-center">
         <h1 className='text-4xl text-[#F6E35D] tracking-widest'>ABOUT</h1>
         <div className="border-white border-2 w-16 "></div>
@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
 
       </div>
-      <div className='w-full h-full lg:flex gap-8 pt-8 lg:pt- my-auto lg:items-center lg:justify-center' >
+      <div className='w-full h-full lg:flex gap-8 pt-8 lg:pt-24/ my-auto lg:items-center lg:justify-center' >
         <div className=' flex flex-col justify-center items-center flex-1'>
           <Image src='/foodd.png' width='300' height='300' alt='' className='' />
           <h3 className='pt-4 text-gray- text-xl font-semibold'>Who&apos;s this guy?</h3>

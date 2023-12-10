@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 // import StarsCanvas from "@/components/StarBackground";
 // import Navbar from "@/components/Navbar";
 import StarsCanvas from "@/components/StarBackground";
 import { Navbar } from "@/components/Navbar";
 import LeftSide from "@/components/LeftSide";
+import RightSide from "@/components/RightSide";
 // import Footer from "@/components/main/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ 
+subsets: ["latin"] 
+});
 
 export const metadata: Metadata = {
   title: "Space Portfolio",
@@ -23,16 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className}  bg-[#030014] overflow-y-scrol overflow-x-hidden`}
+        className={`${inter.className}  bg-[#030014]  overflow-y-scrol overflow-x-hidden`}
       >
         <StarsCanvas />
         <Navbar />
-        <div className="w-full h-[88vh] lg:flex items-center gap- justify-between">
+        <div className="w-full  lg:flex items-center lg:gap-20 justify-between">
           <div className="hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0">
             <LeftSide />
           </div>
-          {children}
-          <div className=""></div>
+          <div className="mx-auto p-4">
+            {children}
+          </div>
+          <div className="hidden lg:inline-flex w-32 h-full fixed right-0 bottom-0">
+            <RightSide />
+          </div>
         </div>
         {/* <Footer /> */}
       </body>
