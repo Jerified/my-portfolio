@@ -22,15 +22,15 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}) { 
   return (
     <html lang="en">
       <body
-        className={`${inter.className}  bg-[#030014]  overflow-y-scrol overflow-x-hidden`}
+        className={`${inter.className}  bg-[#030014] overflow-x-hidden`}
       >
         <StarsCanvas />
         <Navbar />
-        <div className="w-full  lg:flex items-center lg:gap-20 justify-between">
+        <div className="w-full lg:flex items-center lg:gap-20 justify-between">
           <div className="hidden lg:inline-flex w-32 h-full fixed left-0 bottom-0">
             <LeftSide />
           </div>
