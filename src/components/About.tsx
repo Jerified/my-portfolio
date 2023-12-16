@@ -1,10 +1,12 @@
+
 'use client'
 
 import React from 'react'
 import { MdSpeed, MdLightbulbOutline, MdDevices, MdRocketLaunch } from 'react-icons/md'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { SkillBars } from 'react-skills'
+// @ts-ignore
+import { SkillBars } from 'react-skills' 
 
 const skills = [
   { name: 'CSS', level: 90, color: '#2c5282' },
