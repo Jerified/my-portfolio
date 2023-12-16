@@ -8,11 +8,11 @@ const Contact = () => {
    
     return (
         <div className=' text-white max-w-6xl mx-auto pt-20 w-[min(100%,38rem)]'>
-            <div className="flex flex-col items-center gap-4 justify-center">
+            <div className="flex flex-col items-center gap-3 justify-center">
                 <h1 className='text-4xl text-[#F6E35D] tracking-widest'>CONTACT</h1>
-                <div className="border-white border-2 w-16 "></div>
+                <div className="bg-white h-[0.2rem] w-24 "></div>
             </div>
-            <p className="flex text-blue-800 items-center pt-6 justify-center">Have a question or want to work together?</p>
+            <p className="flex text-blue-800 items-center pt-10 justify-center">Have a question or want to work together?</p>
             <form action={async (formData) => {
                 console.log(formData.get('senderEmail'))
                 await sendEmail(formData)

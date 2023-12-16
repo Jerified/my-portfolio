@@ -1,9 +1,7 @@
-
 'use client'
 
 import React from 'react'
 import { MdSpeed, MdLightbulbOutline, MdDevices, MdRocketLaunch } from 'react-icons/md'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 // @ts-ignore
 import { SkillBars } from 'react-skills' 
@@ -90,6 +88,3 @@ const Hero = () => {
 }
 
 export default Hero
-// <div className='w-full h-full flex-1 '>
-//   <Chart className='w-full' options={data.options} series={data.series} type='bar' width='100%' height='70%' />
-// </div>
