@@ -59,7 +59,9 @@ const Hero = () => {
       </div>
       <div className='w-full h-full xl:flex gap-8 pt-8 lg:pt-24 my-auto xl:items-center lg:justify-center'>
         <div className=' flex flex-col justify-center items-center flex-1'>
-          <Image src='/foodd.png' width='300' height='300' alt='' className='' />
+          <div className="overflow-hidden w-48 h-48 clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
+            <Image src='/image.jpg' width='300' height='300' alt='' className='object-cover object-center' />
+          </div>
           <h3 className='pt-4 text-gray- text-xl font-semibold'>Who&apos;s this guy?</h3>
           <p className='text-[0.75rem] lg:text-[1rem] pt-4 text-gray-600'>I&apos;m a Front-End Developer from Lagos, Nigeria.</p>
           <p className='text-[0.75rem] lg:text-[1rem] text-center text-gray-600'>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>

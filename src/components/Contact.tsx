@@ -16,10 +16,10 @@ const Contact = () => {
             <form action={async (formData) => {
                 console.log(formData.get('senderEmail'))
                 await sendEmail(formData)
-            }} className="mt-10 flex flex-col gap-1 text-black">
-                <input className='h-10 p-3 rounded-sm  placeholder:text-[0.8rem]' placeholder='Name' type="text" name="senderName" maxLength={500} id="" />
-                <input className='h-10 p-3 rounded-sm placeholder:text-[0.8rem]' name='senderEmail' required placeholder='Enter email' type="email" id="" />
-                <textarea className='h-[11rem] p-3 rounded-sm placeholder:text-[0.8rem]' required placeholder='Your Message' name="message" maxLength={5000} id=""></textarea>
+            }} className="mt-10 flex flex-col gap-1 text-white">
+                <input className='h-10 p-3 rounded-sm  placeholder:text-[0.8rem] outline-none border-2 border-[#2c5282] bg-inherit' placeholder='Name' type="text" name="senderName" maxLength={500} id="" />
+                <input className='h-10 p-3 rounded-sm placeholder:text-[0.8rem]  outline-none border-2 border-[#2c5282] bg-inherit' name='senderEmail' required placeholder='Enter email' type="email" id="" />
+                <textarea className='h-[11rem] p-3 rounded-sm placeholder:text-[0.8rem]  outline-none border-2 border-[#2c5282] bg-inherit' required placeholder='Your Message' name="message" maxLength={5000} id=""></textarea>
                 <div className="flex justify-end">
                     <button className='group flex  items-center justify-center mt-2 gap-2 h-[3rem] w-[8rem] text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 bg-[#2c5282] hover:bg-[#2c5282]/70' type="submit">Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:transition-x-1 group-hover:-transition-y-1' /> </button>
                 </div>
