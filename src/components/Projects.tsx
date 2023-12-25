@@ -22,10 +22,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">Pet Store</h3>
             </div>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-              An Amazon clone website for visualizing personalized Amazon
-              website. View your products, Add your account with{" "}
-              <span className="text-textGreen">O-auth</span> and then make the
-              purchage using <span className="text-textGreen">stripe</span>.
+              A web app that provides a one-stop solution for pet owners and lovers. Users can also find information about pet care, health, and training.
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Nextjs</li>
@@ -67,17 +64,13 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">My Team</h3>
             </div>
             <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
-              A full functional Cyber Security Blog where you can view the
-              latest post and{" "}
-              <span className="text-textGreen">comments on</span> it by passing
-              your ideas besides you can try to add your own{" "}
-              <span className="">post</span> on it by logging on
-              the portal.
+              A web app that helps companies build dynamics teams made up of global talent.
             </p>
-            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
-              <li>Nextjs</li>
+            <ul className="text-xs md:text-sm tracking-wide flex gap-2 md:gap-5 justify-between">
+              <li>Nextjs</li> 
               <li>Typescript</li>
-              <li>React Hook Form</li>
+              <li>Tailwind css</li>
+              <li>Vercel Deployment</li>
             </ul>
             <div className="text-2xl flex gap-4">
               <a
@@ -106,10 +99,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">Match Update</h3>
             </div>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-              An Amazon clone website for visualizing personalized Amazon
-              website. View your products, Add your account with{" "}
-              <span className="text-textGreen">O-auth</span> and then make the
-              purchage using <span className="text-textGreen">stripe</span>.
+              An web appp that provides live and latest football scores, fitures, results, and news from various league around the world.
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Nextjs</li>
@@ -138,7 +128,7 @@ const Projects = () => {
         <div className="flex flex-col xl:flex-row-reverse gap-6">
           <a
             className="w-full xl:w-1/2 h-auto relative group"
-            href="https://myteamapp-jerified.vercel.app/"
+            href="https://weather-app-jerified.vercel.app/"
             target="_blank"
           >
             <div>
@@ -151,29 +141,25 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">Weather Forecast</h3>
             </div>
             <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
-              A full functional Cyber Security Blog where you can view the
-              latest post and{" "}
-              <span className="text-textGreen">comments on</span> it by passing
-              your ideas besides you can try to add your own{" "}
-              <span className="">post</span> on it by logging on
-              the portal.
+              A web app that provides accurate and reliable weather information for any location. Users can search for any city and see the current and future weather condition.
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Nextjs</li>
               <li>Typescript</li>
+              <li>Tailwind css</li>
               <li>React Hook Form</li>
             </ul>
             <div className="text-2xl flex gap-4">
               <a
                 className=" duration-300"
-                href="https://github.com/Jerified/myteam"
+                href="https://github.com/Jerified/Weather-app"
                 target="_blank"
               >
                 <TbBrandGithub />
               </a>
               <a
                 className="hover:text-textGreen duration-300"
-                href="https://myteamapp-jerified.vercel.app/"
+                href="https://weather-app-jerified.vercel.app/"
                 target="_blank"
               >
                 <RxOpenInNewWindow />

@@ -39,7 +39,7 @@ export const Navbar = () => {
     }
     function NavbarFixed() {
         return (
-          <div className="  h-[65px] fixe top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4">
+          <div className="h-[65px] w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4">
             <div className="w-full max-w-6xl mx-auto h-full flex flex-row items-center justify-between m-auto">
               <a
                 href="#about-me"
@@ -93,27 +93,24 @@ function NavbarScroll({ isScrolling }: any) {
     return (
       <motion.nav
         key={1}
-        // initial="initial"
-        // animate={isScrolling ? "animate" : "initial"}
+        initial="initial"
+        animate={isScrolling ? "animate" : "initial"}
         exit="exit"
         variants={NavAnimations}
-        className="fixed z-10 flex justify-between px-4 py-2 rounded-full left-1/2 top-10"
+        className="fixed z-50 flex justify-between px-4 py-2 rounded-full ts-bg -translate-x- left-1/2 top-10"
       >
         <ul className="flex items-center">
           <li className="px-2 text-white text-md">
-            <Link href={"/pods"}>Magician</Link>
+            <Link href={"/pods"}>About</Link>
           </li>
           <li className="px-2 text-white text-md">
-            <Link href={"/"}>Genius</Link>
+            <Link href={"/"}>Projects</Link>
           </li>
           <li className="px-2 text-white text-md">
-            <Link href={"/"}>Animator</Link>
+            <Link href={"/"}>Contact</Link>
           </li>
-          <li className="px-2 text-white text-md">
-            <Link href={"/"}>UI-AI</Link>
-          </li>
-          <li className="px-4 py-2 ml-2 text-white bg-black rounded-full text-md ">
-            <Link href={"/"}>Login</Link>
+          <li className="px-4 py-2 ml-2 text-white bg-[#2c5282] rounded-full text-md ">
+            <Link href={"/"}>Resume</Link>
           </li>
         </ul>
       </motion.nav>

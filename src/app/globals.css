@@ -5,3 +5,9 @@
 
 
 
+.ts-bg {
+    background: #7FBF89;
+    mix-blend-mode: luminosity;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
+    backdrop-filter: blur(67.957046px);
+}
