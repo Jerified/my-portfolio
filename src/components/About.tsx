@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <div className=' text-white max-w-4xl xl:max-w-6xl mx-auto'>
       <div className="flex flex-col items-center gap-4 justify-center">
-        <h1 className='text-4xl text-[#F6E35D] tracking-widest'>ABOUT</h1>
+        <h1 className='text-4xl text-[#7FBF89] tracking-widest'>ABOUT</h1>
         <div className="border-white border-2 w-16 "></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20">
@@ -59,7 +59,7 @@ const Hero = () => {
       </div>
       <div className='w-full h-full xl:flex gap-8 pt-8 lg:pt-24 my-auto xl:items-center lg:justify-center'>
         <div className=' flex flex-col justify-center items-center flex-1'>
-          <div className="overflow-hidden w-48 h-48 clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
+          <div className="overflow-hidden rounded-[100%] clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
             <Image src='/image.jpg' width='300' height='300' alt='' className='object-cover object-center' />
           </div>
           <h3 className='pt-4 text-gray- text-xl font-semibold'>Who&apos;s this guy?</h3>

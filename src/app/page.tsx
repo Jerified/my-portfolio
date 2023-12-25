@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 // const About = dynamic(() => import ('@/components/About'), {ssr: false})
 import Image from 'next/image'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   )
 }
