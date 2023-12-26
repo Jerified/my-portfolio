@@ -13,15 +13,13 @@ const skills = [
   { name: 'React', level: 80, color: '#2c5282' },
   { name: 'Next.js', level: 80, color: '#2c5282' },
   { name: 'TypeScript', level: 65, color: '#2c5282' },
-  { name: 'Node.js', level: 52, color: '#2c5282' },
+  { name: 'Node.js', level: 55, color: '#2c5282' },
   { name: 'Tailwindcss', level: 90, color: '#2c5282' },
 ]
 
-
-
 const Hero = () => {
   return (
-    <div className=' text-white max-w-4xl xl:max-w-6xl mx-auto'>
+    <div id="about" className='text-white max-w-4xl xl:max-w-6xl mx-auto'>
       <div className="flex flex-col items-center gap-4 justify-center">
         <h1 className='text-4xl text-[#7FBF89] tracking-widest'>ABOUT</h1>
         <div className="border-white border-2 w-16 "></div>
@@ -59,7 +57,7 @@ const Hero = () => {
       </div>
       <div className='w-full h-full xl:flex gap-8 pt-8 lg:pt-24 my-auto xl:items-center lg:justify-center'>
         <div className=' flex flex-col justify-center items-center flex-1'>
-          <div className="overflow-hidden rounded-[100%] clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
+          <div className="overflow-hidden rounded-lg clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
             <Image src='/image.jpg' width='300' height='300' alt='' className='object-cover object-center' />
           </div>
           <h3 className='pt-4 text-gray- text-xl font-semibold'>Who&apos;s this guy?</h3>
@@ -68,18 +66,6 @@ const Hero = () => {
           <p className='text-[0.75rem] lg:text-[1rem] text-blue-800'>Let&apos;s make something special</p>
         </div>
         <div className='w-full my-10 lg:my-0 flex-1'>
-          {/* {skills.map((skill: any) => (
-            <div className="" key={skill.name}>
-              <div className='mt- mx-4 mb-3 flex'>
-                <div className="bg-green-600 text-xs w-28 justify-center flex items-center">{skill.name}</div>
-                <div className='bg-gray-500 dark:bg-dark-3 relative h-8 w-full'>
-                  <div className={`bg-blue-800 absolute top-0 left-0 flex h-full w-[${skill.level+'%'}] items-center justify-center text-xs font-semibold text-white`}>
-                    {skill.level}%
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))} */}
           <SkillBars  color='blue' spacing={20} skills={skills} />
           
 

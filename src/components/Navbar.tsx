@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Socials } from "@/Skills";
@@ -10,7 +10,7 @@ export const Navbar = () => {
     const [isScrolling, setIsScrolling] = useState<boolean>(false);
 
     const handleScroll = () => {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= 30) {
         setIsScrolling(true);
       } else {
         setIsScrolling(false);
@@ -89,6 +89,23 @@ export const Navbar = () => {
     }
 
 function NavbarScroll({ isScrolling }: any) {
+  
+  const ref = useRef<string | any>('')
+  const scrollTo = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href
+    const targetId = href.replace(/.*\#/, "")
+    const elem = document.getElementById(targetId)
+    elem?.scrollIntoView({
+      behavior: "smooth"
+    })
+
+    const links = document.querySelectorAll(".nav-link")
+    links.forEach((link) => {
+      link.classList.remove("active")
+    })
+    e.currentTarget.classList.add("active")
+  }
   console.log(isScrolling)
     return (
       <motion.nav
@@ -99,18 +116,12 @@ function NavbarScroll({ isScrolling }: any) {
         variants={NavAnimations}
         className="fixed z-50 flex justify-between px-4 py-2 rounded-full ts-bg -translate-x- left-1/2 top-10"
       >
-        <ul className="flex items-center">
-          <li className="px-2 text-white text-md">
-            <Link href={"/pods"}>About</Link>
-          </li>
-          <li className="px-2 text-white text-md">
-            <Link href={"/"}>Projects</Link>
-          </li>
-          <li className="px-2 text-white text-md">
-            <Link href={"/"}>Contact</Link>
-          </li>
-          <li className="px-4 py-2 ml-2 text-white bg-[#2c5282] rounded-full text-md ">
-            <Link href={"/"}>Resume</Link>
+        <ul className="flex items-center text-xs sm:text-sm">
+            <Link href='#about' onClick={scrollTo} className="nav-link px-2 text-white">About</Link>
+            <Link href="#projects" className="nav-link px-2 text-white" onClick={scrollTo}>Projects</Link>
+            <Link href="#contact" className="nav-link px-2 text-white" onClick={scrollTo}>Contact</Link>
+            <li className="px-4 py-2 ml-2 text-white bg-[#2c5282] rounded-full text-md ">
+            <Link href="/Oyedele-resume.pdf" target='_blank'>Resume</Link>
           </li>
         </ul>
       </motion.nav>

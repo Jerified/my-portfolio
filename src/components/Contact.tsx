@@ -7,7 +7,7 @@ const Contact = () => {
 
    
     return (
-        <div className=' text-white max-w-6xl mx-auto pt-20 w-[min(100%,38rem)]'>
+        <div id="contact" className=' text-white max-w-6xl mx-auto pt-20 w-[min(100%,38rem)]'>
             <div className="flex flex-col items-center gap-3 justify-center">
                 <h1 className='text-4xl text-[#7FBF89] tracking-widest'>CONTACT</h1>
                 <div className="bg-white h-[0.2rem] w-24 "></div>
