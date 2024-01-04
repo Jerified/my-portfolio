@@ -9,7 +9,6 @@ const Hero = () => {
       <p className="">I&apos;m a front-end developer.</p>
       <Link href={'#about'} id='#about' className='border-2 py-[0.8rem] border-whit hover:bg-[#2c5282] hover:bg-border-none px-5 font-[300] mt-4 gap-2 flex items-center text-sm lg:text-xl cursor-pointer transition'>View my work <span><FaLongArrowAltRight className=''/></span></Link>
       {/* <p className="text-center flex justify-center gap-3 items-center mx-auto">About <span className="text-[#7042f861]">Me</span></p> */}
-
     </div>
   ) 
 }
