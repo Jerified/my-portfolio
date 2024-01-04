@@ -167,6 +167,41 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-16">
+          <a href="https://daily-blog-wf2s.vercel.app/" className="w-full lg:w-1/2 h-auto relative group" target='_blank' >
+            <Image className='w-full h-full object-contain' quality={100} src='/blog.png' alt='blog' width={500} height={500} />
+          </a>
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 lg:justify-center items-end text-right lg:-ml-16 z-10">
+            <div>
+              <h3 className="text-2xl font-bold text-[#2c5282]">Daily Blog</h3>
+            </div>
+            <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
+              An web appp that provides live and latest football scores, fitures, results, and news from various league around the world.
+            </p>
+            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <li>Nextjs</li>
+              <li>Typescript</li>
+              <li>Sanity</li>
+              <li>Vercel Deployment</li>
+            </ul>
+            <div className="text-2xl flex gap-4">
+              <a
+                className="hover:text-textGreen duration-300"
+                href="https://github.com/Jerified/daily-blog"
+                target="_blank"
+              >
+                <TbBrandGithub />
+              </a>
+              <a
+                className="hover:text-textGreen duration-300"
+                href="https://daily-blog-wf2s.vercel.app/"
+                target="_blank"
+              >
+                <RxOpenInNewWindow />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>

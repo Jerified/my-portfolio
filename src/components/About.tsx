@@ -13,8 +13,12 @@ const skills = [
   { name: 'React', level: 80, color: '#2c5282' },
   { name: 'Next.js', level: 80, color: '#2c5282' },
   { name: 'TypeScript', level: 65, color: '#2c5282' },
-  { name: 'Node.js', level: 55, color: '#2c5282' },
+  { name: 'Node.js', level: 60, color: '#2c5282' },
   { name: 'Tailwindcss', level: 90, color: '#2c5282' },
+   { name: 'MongoDB', level: 70, color: '#2c5282' },
+  { name: 'Sanity', level: 75, color: '#2c5282' },
+  { name: 'Supabase', level: 70, color: '#2c5282' },
+  { name: 'Prisma', level: 80, color: '#2c5282' }
 ]
 
 const Hero = () => {

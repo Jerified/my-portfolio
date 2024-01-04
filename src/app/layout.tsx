@@ -7,6 +7,7 @@ import StarsCanvas from "@/components/StarBackground";
 import { Navbar } from "@/components/Navbar";
 import LeftSide from "@/components/LeftSide";
 import RightSide from "@/components/RightSide";
+import { Toaster } from "react-hot-toast";
 // import Footer from "@/components/main/Footer";
 
 const inter = Montserrat({ 
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) { 
   return (
-    <html lang="en" className='scroll-smooth'>
+    <html lang="en" className='!scroll-smooth'>
       <body
         className={`${inter.className}  bg-[#030014] overflow-x-hidden`}
       >
@@ -41,6 +42,7 @@ export default function RootLayout({
             <RightSide />
           </div>
         </div>
+        <Toaster position="bottom-right" />
         {/* <Footer /> */}
       </body>
     </html>
