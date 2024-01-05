@@ -15,7 +15,7 @@ subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
+  title: "Jerrified Portfolio",
   description: "This is my portfolio",
 };
 

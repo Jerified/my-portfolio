@@ -99,7 +99,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">Match Update</h3>
             </div>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-              An web appp that provides live and latest football scores, fitures, results, and news from various league around the world.
+              An web app that provides live and latest football scores, fitures, results, and news from various league around the world.
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Nextjs</li>
@@ -176,7 +176,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold text-[#2c5282]">Daily Blog</h3>
             </div>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-              An web appp that provides live and latest football scores, fitures, results, and news from various league around the world.
+              An web app that shares latest news, tips on technology, science etc. Dailyblog is the blog for anyone who wants o stay updated and learn more about the tech world.
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Nextjs</li>

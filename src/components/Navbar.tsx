@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Socials } from "@/Skills";
 import Image from "next/image";
+import MobileNav from "./MobileNav";
 
 
 export const Navbar = () => {
@@ -54,7 +55,7 @@ function NavbarFixed() {
         </a>
 
         <div className="hidden h-full lg:flex flex-row items-center justify-between">
-          <div className="flex items-center gap-8 w-full h-auto text-gray-200 uppercase">
+          <div className="flex items-center  gap-8 w-full h-auto text-gray-200 uppercase">
             <a href="#about" className="cursor-pointer">
               About
             </a>
@@ -69,13 +70,14 @@ function NavbarFixed() {
             </li>
           </div>
         </div>
-        <div
+        {/* <div
           className="w-6 h-5 flex flex-col justify-between items-center md:hidden text-4xl cursor-pointer overflow-hidden group"
         >
           <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-2 transition-all ease-out duration-300 bg-white" />
           <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-0 transition-all ease-out duration-300 bg-white translate-x-3" />
           <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-3 transition-all ease-out duration-300 bg-white translate-x-1" />
-        </div>
+        </div> */}
+        <MobileNav />
       </div>
 
     </div>
@@ -108,7 +110,7 @@ function NavbarScroll({ isScrolling }: any) {
       animate={isScrolling ? "animate" : "initial"}
       exit="exit"
       variants={NavAnimations}
-      className="fixed z-50 flex justify-between px-4 py-2 rounded-full ts-bg -translate-x- left-1/2 top-10"
+      className="fixed z-50 flex justify-between px-4 py-2 rounded-full ts-bg -translate-x- left-1/2 top-7"
     >
       <ul className="flex items-center text-xs sm:text-sm">
         <Link href='#about' onClick={scrollTo} className="nav-link px-2 text-white">About</Link>
