@@ -70,14 +70,14 @@ function NavbarFixed() {
             </li>
           </div>
         </div>
-        {/* <div
+        <div
           className="w-6 h-5 flex flex-col justify-between items-center md:hidden text-4xl cursor-pointer overflow-hidden group"
         >
-          <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-2 transition-all ease-out duration-300 bg-white" />
+          {/* <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-2 transition-all ease-out duration-300 bg-white" />
           <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-0 transition-all ease-out duration-300 bg-white translate-x-3" />
-          <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-3 transition-all ease-out duration-300 bg-white translate-x-1" />
-        </div> */}
-        <MobileNav />
+          <span className="w-full h-[2px] inline-flex transform group-hover:translate-x-3 transition-all ease-out duration-300 bg-white translate-x-1" /> */}
+            <MobileNav />
+        </div>
       </div>
 
     </div>

@@ -10,13 +10,13 @@ export default function MobileNav() {
     };
 
     return (
-        <header className="sticky top-0 inset-x-0 p-6 bg-black/30">
+        <header className="sticky top-0 inset-x-0 p-6">
             <nav className="container mx-auto ">
                 <motion.button
                     initial="hide"
                     animate={mobileNav ? "show" : "hide"}
                     onClick={toggleMobileNav}
-                    className="flex flex-col space-y-1 relative z-10"
+                    className="flex flex-col space-y-1 relative z-10 lg:hidden"
                 >
                     <motion.span
                         variants={{
@@ -100,7 +100,7 @@ export default function MobileNav() {
                                             opacity: 1,
                                         },
                                     }}
-                                    className="list-none flex flex-col items-center  gap-8 w-full h-auto text-gray-200 uppercase"
+                                    className="list-none flex flex-col items-center text-xl gap-8 w-full h-auto text-gray-200 uppercase"
                                 >
                                     <a href="#about" className="cursor-pointer">
                                         About
