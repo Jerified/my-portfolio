@@ -50,7 +50,7 @@ const Projects = () => {
         </div>
         <div className="flex flex-col xl:flex-row-reverse pb-8 gap-6">
           <a
-            className="w-full xl:w-1/2 h-auto relative group"
+            className="w-full lg:w-1/2 h-auto relative group"
             href="https://myteamapp-jerified.vercel.app/"
             target="_blank"
           >
@@ -91,7 +91,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-16">
-          <a href="https://pet-store1.vercel.app/" className="w-full lg:w-1/2 h-auto relative group" target='_blank' >
+          <a href="https://football-matches-unnx.vercel.app/" className="w-full lg:w-1/2 h-auto relative group" target='_blank' >
             <Image className='w-full h-full object-contain' quality={100} src='/footbalUpdate.png' alt='pet-store' width={500} height={500} />
           </a>
           <div className="w-full lg:w-1/2 flex flex-col gap-4 lg:justify-center items-end text-right lg:-ml-16 z-10">
@@ -110,14 +110,14 @@ const Projects = () => {
             <div className="text-2xl flex gap-4">
               <a
                 className="hover:text-textGreen duration-300"
-                href="https://github.com/Jerified/Pet-Store"
+                href="https://github.com/Jerified/football-matches"
                 target="_blank"
               >
                 <TbBrandGithub />
               </a>
               <a
                 className="hover:text-textGreen duration-300"
-                href="https://pet-store1.vercel.app/"
+                href="https://football-matches-unnx.vercel.app/"
                 target="_blank"
               >
                 <RxOpenInNewWindow />
