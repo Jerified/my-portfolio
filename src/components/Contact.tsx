@@ -26,7 +26,7 @@ const Contact = () => {
                 }
                 toast.success("Email sent successfully!")
             }} className="mt-10 flex flex-col gap-1 text-white">
-                <input className='h-10 p-3 rounded-sm  placeholder:text-[0.8rem] outline-none border-2 border-[#2c5282] bg-inherit' placeholder='Name' type="text" name="senderName" maxLength={500} id="" />
+                <input className='h-10 p-3 rounded-sm  placeholder:text-[0.8rem] outline-none border-2 border-[#2c5282] bg-inherit' required placeholder='Name' type="text" name="senderName" maxLength={500} id="" />
                 <input className='h-10 p-3 rounded-sm placeholder:text-[0.8rem]  outline-none border-2 border-[#2c5282] bg-inherit' name='senderEmail' required placeholder='Enter email' type="email" id="" />
                 <textarea className='h-[11rem] p-3 rounded-sm placeholder:text-[0.8rem]  outline-none border-2 border-[#2c5282] bg-inherit' required placeholder='Your Message' name="message" maxLength={5000} id=""></textarea>
                 <div className="flex justify-end">
