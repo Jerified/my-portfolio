@@ -9,9 +9,9 @@ import { SkillBars } from 'react-skills'
 const skills = [
   { name: 'CSS', level: 90, color: '#2c5282' },
   { name: 'HTML', level: 90, color: '#2c5282' },
-  { name: 'JavaScript', level: 70, color: '#2c5282' },
+  { name: 'JavaScript', level: 80, color: '#2c5282' },
   { name: 'React', level: 80, color: '#2c5282' },
-  { name: 'Next.js', level: 80, color: '#2c5282' },
+  { name: 'Next.js', level: 85, color: '#2c5282' },
   { name: 'TypeScript', level: 65, color: '#2c5282' },
   { name: 'Node.js', level: 60, color: '#2c5282' },
   { name: 'Tailwindcss', level: 90, color: '#2c5282' },
