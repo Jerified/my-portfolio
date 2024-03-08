@@ -66,7 +66,7 @@ function NavbarFixed() {
               Contact
             </a>
             <li className="px-4 py-2 text-white bg-[#2c5282]/70 hover:bg-[#2c5282]/100 transition ease-in rounded-sm text-md ">
-              <Link href="/Oyedele-resume.pdf" target='_blank'>Resume</Link>
+              <Link href="/Oyedele_resume.pdf" target='_blank'>Resume</Link>
             </li>
           </div>
         </div>
