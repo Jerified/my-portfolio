@@ -16,9 +16,8 @@ const skills = [
   { name: 'Node.js', level: 60, color: '#2c5282' },
   { name: 'Tailwindcss', level: 90, color: '#2c5282' },
    { name: 'MongoDB', level: 70, color: '#2c5282' },
-  { name: 'Sanity', level: 75, color: '#2c5282' },
-  { name: 'Supabase', level: 70, color: '#2c5282' },
-  { name: 'Prisma', level: 80, color: '#2c5282' }
+  { name: 'Go', level: 70, color: '#2c5282' },
+  { name: 'MY-SQL', level: 75, color: '#2c5282' },
 ]
 
 const Hero = () => {

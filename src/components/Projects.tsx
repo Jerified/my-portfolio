@@ -14,6 +14,42 @@ const Projects = () => {
       </div>
       <div className="w-full flex flex-col items-center gap-8">
         <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-16">
+          <a href="https://todolist-six-smoky.vercel.app/" className="w-full lg:w-1/2 h-auto relative group" target='_blank' >
+            <Image className='w-full h-full object-contain' quality={100} src='/Todolist.png' alt='pet-store' width={500} height={500} />
+          </a>
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 lg:justify-between items-end text-right lg:-ml-16 z-10">
+            <div>
+              <h3 className="text-2xl font-bold text-[#2c5282]">TodoList</h3>
+            </div>
+            <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
+              A React-based todo list application that provides a one-stop solution for managing tasks effectively. Users can create, edit, delete with secure authentication and data storage via a Golang, MYSQL and JWT.
+            </p>
+            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <li>React</li>
+              <li>Typescript</li>
+              <li>Go</li>
+              <li>Gorm</li>
+              <li>MY-SQL</li>
+            </ul>
+            <div className="text-2xl flex gap-4">
+              <a
+                className="hover:text-textGreen duration-300"
+                href="https://github.com/Jerified/Todolist"
+                target="_blank"
+              >
+                <TbBrandGithub />
+              </a>
+              <a
+                className="hover:text-textGreen duration-300"
+                href="https://todolist-six-smoky.vercel.app/"
+                target="_blank"
+              >
+                <RxOpenInNewWindow />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6 pb-8 lg:pb-16">
           <a href="https://pet-store1.vercel.app/" className="w-full lg:w-1/2 h-auto relative group" target='_blank' >
             <Image className='w-full h-full object-contain' quality={100} src='/petStore.png' alt='pet-store' width={500} height={500} />
           </a>

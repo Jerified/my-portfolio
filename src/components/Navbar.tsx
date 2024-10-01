@@ -7,7 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Socials } from "@/Skills";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
+import { Alex_Brush } from "next/font/google";
 
+const inter = Alex_Brush({ 
+    subsets: ["latin"],
+    weight: "400"
+    });
 
 export const Navbar = () => {
   const [isScrolling, setIsScrolling] = useState<boolean>(false);
@@ -42,14 +47,14 @@ export const Navbar = () => {
 }
 function NavbarFixed() {
   return (
-    <div className="h-[65px] w-full fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4">
-      <div className="w-full max-w-6xl mx-auto h-full flex flex-row items-center justify-between m-auto">
+    <div className="h-[65px] lg:h-[78px] w-full fixed top-0 shadow-lg shado-[#2A0E61]/50 bg-[#03001417 backdrop-blur-m z-50 px-4 py-8">
+      <div className="w-full max-w-6xl mx-auto h-full flex flex-row items-center justify-center lg:justify-between m-auto">
         <a
           href="/"
-          className=" flex flex-row items-center"
+          className=" flex flex-row items-center "
         >
           {/* <img src='/logo.jpeg' alt='logo' className='w-20'  /> */}
-          <span className="font-bold text-md text-gray-300 uppercase ">
+          <span className={`${inter.className} text-3xl font-bold text-md text-gray-300`}>
             Jerrified<span className='text-[#2c5282]'>Dev</span>
           </span>
         </a>
@@ -65,7 +70,7 @@ function NavbarFixed() {
             <a href="#contact" className="cursor-pointer">
               Contact
             </a>
-            <li className="px-4 py-2 text-white bg-[#2c5282]/70 hover:bg-[#2c5282]/100 transition ease-in rounded-sm text-md ">
+            <li className="px-4 py-2 text-white bg-[#2c5282]/70 hover:bg-[#2c5282]/100 transition ease-in rounded-sm ">
               <Link href="/Oyedele_resume.pdf" target='_blank'>Resume</Link>
             </li>
           </div>
