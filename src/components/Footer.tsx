@@ -26,19 +26,19 @@ const Footer = () => {
       </div>
       <div className="flex justify-center pt-10 gap-7">
             <Link href={'https://github.com/Jerified'} target='_blank' className='bg-[#2c5282] p-3'>
-                <TbBrandGithub className='text-white text-2xl' />
+                <TbBrandGithub className='text-white text-lg lg:text-2xl' />
             </Link>
             <Link href={'https://twitter.com/Jeremiah4life11'} target='_blank' className='bg-[#2c5282] p-3'>
-                <BsTwitterX className='text-white text-2xl' />
+                <BsTwitterX className='text-white text-lg lg:text-2xl' />
             </Link>
             <Link href={'https://www.linkedin.com/in/oyedele-jeremiah-7ab247123?utm_source=share'} target='_blank' className='bg-[#2c5282] p-3'>
-                <FaLinkedinIn className='text-white text-2xl' />
+                <FaLinkedinIn className='text-white text-lg lg:text-2xl' />
             </Link>
             {/* <Link href={'https://github.com/Jerified'} className='bg-[#2c5282] p-3'>
                 <TbBrandGithub className='text-white text-3xl' />
             </Link> */}
         </div>
-        <p className="pt-10 text-gray-500 flex justify-center">OYEDELE JEREMIAH <span className="text-[#7FBF89] indent-2">&copy; 2023</span></p>
+        <p className="pt-10 text-gray-500 flex justify-center">OYEDELE JEREMIAH <span className="text-[#7FBF89] indent-2">&copy; 2024</span></p>
     </div>
   ) 
 }

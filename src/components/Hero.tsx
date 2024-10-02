@@ -9,11 +9,11 @@ const inter = Raleway({
     }); 
 const Hero = () => {
   return (
-    <div id='#' className={`${inter.className} p-5 h-[calc(100vh-65px)]  flex flex-col items-col items-center justify-center w-full text-white font-medium leading-6 sm:leading-8 lg:leading-[3rem]`}>p
+    <div id='#' className={`${inter.className} p-5 h-[calc(100vh-65px)]  flex flex-col items-col items-center justify-center w-full text-white font-medium leading-6 sm:leading-8 lg:leading-[3rem]`}>
         <div className="flex flex-col justify-center items-center h-full">
             <div className="flex gap-5 items-center justify-center w-full">
-                <h1 className='flex whitespace-nowrap md:text-xl'>HI IM </h1>
-                <div className="h-[6px] bg-blue-800 w-full"></div>
+                <h1 className='flex whitespace-nowrap md:text-xl font-[300]'>HI IM </h1>
+                <div className="h-[4px] md:h-[5px] bg-blue-800 w-full"></div>
             </div>
               <h1 className='text-4xl sm:text-6xl lg:text-7xl uppercase tracking-widest w-full font-extrabold'>Jeremiah</h1>
               <div className="flex  justify-end w-full ">    
