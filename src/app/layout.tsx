@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 // import StarsCanvas from "@/components/StarBackground";
 // import Navbar from "@/components/Navbar";
@@ -10,7 +10,7 @@ import RightSide from "@/components/RightSide";
 import { Toaster } from "react-hot-toast";
 // import Footer from "@/components/main/Footer";
 
-const inter = Montserrat({ 
+const inter = Inter({ 
 subsets: ["latin"] 
 });
 

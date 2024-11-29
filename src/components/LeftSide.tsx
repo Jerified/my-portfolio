@@ -15,7 +15,7 @@ export default function LeftSide() {
                 <BsTwitterX className='text-white' />
             </span>
         </a>
-        <a href='https://www.linkedin.com/in/oyedele-jeremiah-7ab247123?utm_source=share' target='_blank'>
+        <a href='https://www.linkedin.com/in/Jer' target='_blank'>
             <span className="w-10 h-10 text-xl bg-blue-600 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
                 <FaLinkedinIn className='text-white' />
             </span>

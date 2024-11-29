@@ -71,7 +71,7 @@ function NavbarFixed() {
               Contact
             </a>
             <li className="px-4 py-2 text-white bg-[#2c5282]/70 hover:bg-[#2c5282]/100 transition ease-in rounded-sm ">
-              <Link href="/Oyedele_resume.pdf" target='_blank'>Resume</Link>
+              <Link href="https://docs.google.com/document/d/1OPNpEFzk3BsbtW8KPEVLNvYJyZsn8uYhyEJL9Xm4q4I/edit?usp=sharing"  role="button" target='_blank'>Resume</Link>
             </li>
           </div>
         </div>
@@ -107,7 +107,6 @@ function NavbarScroll({ isScrolling }: any) {
     })
     e.currentTarget.classList.add("active")
   }
-  console.log(isScrolling)
   return (
     <motion.nav
       key={1}
@@ -122,7 +121,7 @@ function NavbarScroll({ isScrolling }: any) {
         <Link href="#projects" className="nav-link px-2 text-white" onClick={scrollTo}>Projects</Link>
         <Link href="#contact" className="nav-link px-2 text-white" onClick={scrollTo}>Contact</Link>
         <li className="px-4 py-2 ml-2 text-white bg-[#2c5282] rounded-full text-md ">
-          <Link href="/Oyedele-resume.pdf" target='_blank'>Resume</Link>
+          <Link href="https://docs.google.com/document/d/1OPNpEFzk3BsbtW8KPEVLNvYJyZsn8uYhyEJL9Xm4q4I/edit?usp=sharing"  role="button" >Resume</Link>
         </li>
       </ul>
     </motion.nav>

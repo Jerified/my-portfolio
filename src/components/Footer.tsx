@@ -31,7 +31,7 @@ const Footer = () => {
             <Link href={'https://twitter.com/Jeremiah4life11'} target='_blank' className='bg-[#2c5282] p-3'>
                 <BsTwitterX className='text-white text-lg lg:text-2xl' />
             </Link>
-            <Link href={'https://www.linkedin.com/in/oyedele-jeremiah-7ab247123?utm_source=share'} target='_blank' className='bg-[#2c5282] p-3'>
+            <Link href={'https://www.linkedin.com/in/Jerrified'} target='_blank' className='bg-[#2c5282] p-3'>
                 <FaLinkedinIn className='text-white text-lg lg:text-2xl' />
             </Link>
             {/* <Link href={'https://github.com/Jerified'} className='bg-[#2c5282] p-3'>

@@ -5,6 +5,7 @@ import { MdSpeed, MdLightbulbOutline, MdDevices, MdRocketLaunch } from 'react-ic
 import Image from 'next/image'
 // @ts-ignore
 import { SkillBars } from 'react-skills' 
+import Skills from './Skills'
 
 const skills = [
   { name: 'CSS', level: 90, color: '#2c5282' },
@@ -58,7 +59,7 @@ const Hero = () => {
         </div>
 
       </div>
-      <div className='w-full h-full xl:flex gap-8 pt-8 lg:pt-24 my-auto xl:items-center lg:justify-center'>
+      <div className='w-full h-full xl:grid grid-cols-2 gap-8 pt-8 lg:pt-24 my-auto xl:items-center lg:justify-center'>
         <div className=' flex flex-col justify-center items-center flex-1'>
           <div className="overflow-hidden rounded-lg clip-path-[polygon(25%_0%,_75%_0%,_100%_50%,_75%_100%,_25%_100%,_0%_50%)]">
             <Image src='/image.jpg' width='300' height='300' alt='' className='object-cover object-center' />
@@ -68,10 +69,9 @@ const Hero = () => {
           <p className='text-[0.75rem] lg:text-[1rem] text-center text-gray-600'>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
           <p className='text-[0.75rem] lg:text-[1rem] text-blue-800'>Let&apos;s make something special</p>
         </div>
-        <div className='w-full my-10 lg:my-0 flex-1'>
-          <SkillBars  color='blue' spacing={20} skills={skills} />
-          
-
+        <div className='w-full my-10 lg:my-0 flex-1 relative z-[1]'>
+          {/* <SkillBars  color='blue' spacing={20} skills={skills} /> */}
+          <Skills />
         </div>
       </div>
     </div>
