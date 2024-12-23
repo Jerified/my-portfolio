@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
               <h1 className='text-4xl sm:text-6xl lg:text-7xl uppercase tracking-widest w-full font-extrabold'>Jeremiah</h1>
               <div className="flex  justify-end w-full ">    
-                <p className="uppercase text-blue-800 text-sm max-w-[6rem] flex items-end justify-end">A frontend developer</p>
+                <p className="uppercase text-blue-800 text-sm max-w-[6rem] flex items-end justify-end">A fullstack developer</p>
               </div>
               <Link href={'#about'} id='#about' className='border-2 py-[0.8rem] border-whit hover:bg-[#2c5282] hover:bg-border-none px-5 font-[300] mt-4 gap-2 flex items-center text-sm lg:text-xl cursor-pointer transition'>View my work <span><FaLongArrowAltRight className=''/></span></Link>
         </div>
