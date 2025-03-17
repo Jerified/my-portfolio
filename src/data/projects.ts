@@ -1,6 +1,14 @@
 
 export const projects = [
     {
+      title: "FeedMe",
+      description: "FeedMe is a modern e-commerce platform designed to revolutionize the way users shop for groceries and everyday essentials. Built with Next.js and TypeScript, FeedMe offers a seamless and intuitive shopping experience, allowing users to browse a wide range of products, add items to their cart, and complete purchases with ease.",
+      image: "/FeedMe.png",
+      link: "https://feedme.seedspikeafrica.com/",
+      github: "https://github.com/Jerified/Todolist",
+      technologies: ["Next.js", "Typescript", "Nodejs", "MongoDB", "Redux"],
+    },
+    {
       title: "TodoList",
       description: "A React-based todo list application that provides a one-stop solution for managing tasks effectively. Users can create, edit, delete with secure authentication and data storage via a Golang, MYSQL and JWT.",
       image: "/Todolist.png",

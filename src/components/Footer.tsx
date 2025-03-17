@@ -25,20 +25,20 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex justify-center pt-10 gap-7">
-            <Link href={'https://github.com/Jerified'} target='_blank' className='bg-[#2c5282] p-3'>
+            <Link href={'https://github.com/Jerified'} target='_blank' className='bg-[#2c5282]/30 rounded-md p-3'>
                 <TbBrandGithub className='text-white text-lg lg:text-2xl' />
             </Link>
-            <Link href={'https://twitter.com/Jeremiah4life11'} target='_blank' className='bg-[#2c5282] p-3'>
+            <Link href={'https://twitter.com/Jeremiah4life11'} target='_blank' className='bg-[#2c5282]/30 rounded-md p-3'>
                 <BsTwitterX className='text-white text-lg lg:text-2xl' />
             </Link>
-            <Link href={'https://www.linkedin.com/in/Jerrified'} target='_blank' className='bg-[#2c5282] p-3'>
+            <Link href={'https://www.linkedin.com/in/Jerrified'} target='_blank' className='bg-[#2c5282]/30 rounded-md p-3'>
                 <FaLinkedinIn className='text-white text-lg lg:text-2xl' />
             </Link>
             {/* <Link href={'https://github.com/Jerified'} className='bg-[#2c5282] p-3'>
                 <TbBrandGithub className='text-white text-3xl' />
             </Link> */}
         </div>
-        <p className="pt-10 text-gray-500 flex justify-center">OYEDELE JEREMIAH <span className="text-[#7FBF89] indent-2">&copy; 2024</span></p>
+        <p className="pt-10 text-gray-500 flex justify-center">OYEDELE JEREMIAH <span className="text-[#7FBF89] indent-2">&copy; 2025</span></p>
     </div>
   ) 
 }
