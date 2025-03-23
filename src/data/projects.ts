@@ -9,6 +9,14 @@ export const projects = [
       technologies: ["Next.js", "Typescript", "Nodejs", "MongoDB", "Redux"],
     },
     {
+      title: "WorkSpot",
+      description: "WorkSpot is a responsive web app built with React, Next.js, and Redux to help users find coworking spaces. It features a dynamic search bar with filters for price range and amenities like Wi-Fi, parking, and meeting rooms.",
+      image: "/work-spot.png",
+      link: "https://work-spot-rouge.vercel.app/",
+      github: "https://github.com/Jerified/work-spot",
+      technologies: ["Next.js", "Typescript", "Nodejs", "MongoDB", "Redux"],
+    },
+    {
       title: "TodoList",
       description: "A React-based todo list application that provides a one-stop solution for managing tasks effectively. Users can create, edit, delete with secure authentication and data storage via a Golang, MYSQL and JWT.",
       image: "/Todolist.png",
