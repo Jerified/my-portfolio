@@ -40,7 +40,7 @@ const Hero = () => {
         ].map(({ icon: Icon, title, desc }, index) => (
           <div key={index} className="flex flex-col items-center justify-center">
             <div className="flex flex-col justify-center items-center gap-3">
-              <Icon className="text-8xl bg-blue-800 p-4 rounded-full" />
+              <Icon className="text-8xl bg-blue-800/20 p-4 rounded-full" />
               <h1 className="text-2xl">{title}</h1>
             </div>
             <p className="text-sm text-center pt-2 text-gray-600 font-light">{desc}</p>
