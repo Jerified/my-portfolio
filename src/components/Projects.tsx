@@ -57,7 +57,7 @@ const Projects = async () => {
               <div>
                 <h3 className="text-2xl font-bold text-[#2c5282]">{project.title}</h3>
               </div>
-              <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
+              <p className="bg-[#112240]/60 text-sm md:text-base p-2 md:p-6 rounded-md">
                 {project.description}
               </p>
               <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
