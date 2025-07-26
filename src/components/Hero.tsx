@@ -26,9 +26,8 @@ const Hero = () => {
     visible: { y: -10, opacity: 1 },
   };
 
-  // Calculate when to show the role (after last letter animates in)
   useEffect(() => {
-    const totalDelay = (name.length - 1) * 0.2 + 0.5; // last letter's delay + duration
+    const totalDelay = (name.length - 1) * 0.2 + 0.5; 
     const timer = setTimeout(() => setShowRole(true), totalDelay * 1000);
     return () => clearTimeout(timer);
   }, []);
