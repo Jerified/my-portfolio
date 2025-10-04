@@ -66,13 +66,15 @@ const Projects = async () => {
                 ))}
               </ul>
               <div className="text-2xl flex gap-4">
-                <a
-                  className="hover:text-textGreen duration-300"
-                  href={project.github}
-                  target="_blank"
-                >
-                  <TbBrandGithub />
-                </a>
+              {project.github && (
+                  <a
+                    className="hover:text-textGreen duration-300"
+                    href={project.github}
+                    target="_blank"
+                  >
+                    <TbBrandGithub />
+                  </a>
+                )}
                 <a
                   className="hover:text-textGreen duration-300"
                   href={project.link}
