@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Socials } from "@/Skills";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
-import { Pacifico } from "next/font/google";
+import { Alex_Brush } from "next/font/google";
 
-const inter = Pacifico({
+const inter = Alex_Brush({ 
     subsets: ["latin"],
     weight: "400"
     });

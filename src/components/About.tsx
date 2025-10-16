@@ -82,7 +82,7 @@ const Hero = () => {
           <p className="text-sm lg:text-base text-center text-gray-400">
             Passionate about building high-performance applications with seamless user experiences.
           </p>
-          <p className="text-sm lg:text-base text-blue-800 mt-2 font-semibold">Let&apos;s build something great together!</p>
+          <a href="#contact" className="text-sm lg:text-base text-blue-800 mt-2 font-semibold cursor-pointer hover:underline">Let&apos;s build something great together!</a>
         </div>
 
         {/* Skills Section */}
