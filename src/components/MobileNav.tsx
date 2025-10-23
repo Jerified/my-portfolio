@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from "next/link";
+import { Alex_Brush } from "next/font/google";
+
+const alexBrush = Alex_Brush({ 
+    subsets: ["latin"],
+    weight: "400"
+});
 
 export default function MobileNav() {
     const [mobileNav, setMobileNav] = useState(false);
@@ -10,13 +16,21 @@ export default function MobileNav() {
     };
 
     return (
-        <header className="sticky top-0 inset-x-0 p-6">
-            <nav className="container mx-auto ">
+        <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-sm px-4">
+            <nav className="flex items-center justify-between px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/20">
+                {/* Logo */}
+                <a href="/" className="flex flex-row items-center">
+                    <span className={`${alexBrush.className} text-lg font-bold text-gray-300 hover:text-white transition-colors duration-200`}>
+                        Jerrified<span className='text-[#d4a574]'>Dev</span>
+                    </span>
+                </a>
+
+                {/* Hamburger Menu */}
                 <motion.button
                     initial="hide"
                     animate={mobileNav ? "show" : "hide"}
                     onClick={toggleMobileNav}
-                    className="flex flex-col space-y-1 relative z-10 lg:hidden"
+                    className="flex flex-col space-y-1 relative z-10 p-2"
                 >
                     <motion.span
                         variants={{
@@ -56,95 +70,54 @@ export default function MobileNav() {
                 </motion.button>
                 <AnimatePresence>
                     {mobileNav && (
-                        <MotionConfig
-                            transition={{
-                                type: "spring",
-                                bounce: 0.1,
-                            }}
+                        <motion.div
+                            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            className="absolute top-full left-0 right-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
                         >
-                            <motion.div
-                                key="mobile-nav"
-                                variants={{
-                                    hide: {
-                                        x: "-100%",
-                                        transition: {
-                                            type: "spring",
-                                            bounce: 0.1,
-                                            when: "afterChildren",
-                                            staggerChildren: 0.25,
-                                        },
-                                    },
-                                    show: {
-                                        x: "0%",
-                                        transition: {
-                                            type: "spring",
-                                            bounce: 0.1,
-                                            when: "beforeChildren",
-                                            staggerChildren: 0.25,
-                                        },
-                                    },
-                                }}
-                                initial="hide"
-                                animate="show"
-                                exit="hide"
-                                className="fixed inset-0 bg-[#7FBF89] h-screen p-6 flex flex-col justify-center space-y-10 lg:hidden"
-                            >
-                                <motion.ul
-                                    variants={{
-                                        hide: {
-                                            y: "25%",
-                                            opacity: 0,
-                                        },
-                                        show: {
-                                            y: "0%",
-                                            opacity: 1,
-                                        },
-                                    }}
-                                    className="list-none flex flex-col items-center text-xl gap-8 w-full h-auto text-gray-200 uppercase"
+                            <div className="p-4 space-y-3">
+                                <motion.a
+                                    href="#about"
+                                    className="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors duration-200 cursor-pointer"
+                                    whileHover={{ x: 4 }}
+                                    onClick={() => setMobileNav(false)}
                                 >
-                                    <a href="#about" className="cursor-pointer">
-                                        About
-                                    </a>
-                                    <a href="#projects" className="cursor-pointer">
-                                        Projects
-                                    </a>
-                                    <a href="#contact" className="cursor-pointer">
-                                        Contact
-                                    </a>
-                                    
-                                </motion.ul>
+                                    About
+                                </motion.a>
+                                <motion.a
+                                    href="#projects"
+                                    className="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors duration-200 cursor-pointer"
+                                    whileHover={{ x: 4 }}
+                                    onClick={() => setMobileNav(false)}
+                                >
+                                    Projects
+                                </motion.a>
+                                <motion.a
+                                    href="#contact"
+                                    className="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors duration-200 cursor-pointer"
+                                    whileHover={{ x: 4 }}
+                                    onClick={() => setMobileNav(false)}
+                                >
+                                    Contact
+                                </motion.a>
+                                <div className="border-t border-white/20 my-3"></div>
                                 <motion.div
-                                    variants={{
-                                        hide: {
-                                            y: "25%",
-                                            opacity: 0,
-                                        },
-                                        show: {
-                                            y: "0%",
-                                            opacity: 1,
-                                        },
-                                    }}
-                                    className="w-full h-px bg-white/30"
-                                ></motion.div>
-                                <motion.ul
-                                    variants={{
-                                        hide: {
-                                            y: "25%",
-                                            opacity: 0,
-                                        },
-                                        show: {
-                                            y: "0%",
-                                            opacity: 1,
-                                        },
-                                    }}
-                                    className=" flex justify-center"
+                                    whileHover={{ x: 4 }}
+                                    className="px-4 py-3"
                                 >
-                                    <li className="px-4 py-2 text-white bg-[#2c5282]/70 hover:bg-[#2c5282]/100 transition ease-in rounded-sm text-md ">
-                                        <Link href="/Oyedele-resume.pdf" target='_blank'>Resume</Link>
-                                    </li>
-                                </motion.ul>
-                            </motion.div>
-                        </MotionConfig>
+                                    <Link 
+                                        href="https://docs.google.com/document/d/130tyY-dbYOi8gxirFpIrufPzmBWdSVHpnUP-qsyjsRI/edit?usp=sharing" 
+                                        target='_blank'
+                                        className="block w-full px-4 py-2 text-center text-black bg-gradient-to-r from-[#d4a574] to-[#c49b6a] hover:from-[#c49b6a] hover:to-[#d4a574] transition-all duration-300 rounded-lg text-sm font-semibold"
+                                        onClick={() => setMobileNav(false)}
+                                    >
+                                        Resume
+                                    </Link>
+                                </motion.div>
+                            </div>
+                        </motion.div>
                     )}
                 </AnimatePresence>
             </nav>

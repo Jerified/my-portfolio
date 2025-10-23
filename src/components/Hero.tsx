@@ -3,17 +3,27 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import { Raleway } from "next/font/google";
+import { Anton } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
+import { MorphingText } from '@/components/ui/morphing-text';
+import { ComicText } from './ComicText';
+import ShinyButton from './ShinyButton';
 
-const inter = Raleway({ 
+const anton = Anton({ 
     subsets: ["latin"],
-    weight: "800"
+    weight: "400"
 }); 
 
 const Hero = () => {
   const name = "Jeremiah";
-  const role = "A fullstack developer";
+  const roles = [
+    "A Frontend Developer",
+    "A Backend Developer", 
+    "A Full Stack Developer",
+    "A React Developer",
+    "A Node.js Developer",
+    "A Web Developer"
+  ];
   const [showRole, setShowRole] = useState(false);
 
   // Animation variants
@@ -33,55 +43,22 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id='#' className={`${inter.className} p-5 h-[calc(100vh-65px)] flex flex-col items-center justify-center w-full text-white font-medium leading-6 sm:leading-8 lg:leading-[3rem]`}>
-      <div className="flex flex-col justify-center items-center h-full">
-        <div className="flex gap-5 items-center justify-center w-full">
-          <h1 className='flex whitespace-nowrap md:text-xl font-[300]'>HI IM </h1>
-          <div className="h-[4px] md:h-[5px] bg-blue-800 w-full"></div>
+        <div id='#' className={`${anton.className} p-5 h-screen flex flex-col items-center justify-center w-full text-white dark:text-white light:text-gray-900`}>
+      <div className="flex flex-col justify-center items-center h-full w-full max-w-6xl mx-auto px-4 pt-6">
+        <div className="flex justify-center w-full mb-2">
+          <ComicText>{name}</ComicText>
         </div>
-        <div className="flex justify-center w-full">
-          <AnimatePresence>
-            {name.split("").map((char, i) => (
-              <motion.span
-                key={i}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={nameVariants}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                className="text-4xl sm:text-6xl lg:text-7xl p-0 uppercase tracking-widest font-extrabold m-0"
-                style={{ transformOrigin: "50% 50%" }}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </AnimatePresence>
+        <div className="flex justify-center w-full min-h-[3rem] md:min-h-[4rem]">
+          <MorphingText 
+            texts={roles}
+            className="uppercase text-[#d4a574] dark:text-[#d4a574] light:text-[#b8860b] text-base sm:text-xl md:text-2xl lg:text-3xl flex items-center justify-center whitespace-nowrap font-normal"
+          />
         </div>
-        <div className="flex justify-end w-full min-h-[2.5rem]">
-          <AnimatePresence>
-            {showRole && (
-              <div className="flex">
-                {role.split("").map((char, i) => (
-                  <motion.span
-                    key={i}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={roleVariants}
-                    transition={{ yoyo: Infinity, duration: 0.5, delay: i * 0.1 }}
-                    className="uppercase text-blue-800 text-sm sm:text-base max-w-[6rem] flex items-end justify-end whitespace-nowrap"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-              </div>
-            )}
-          </AnimatePresence>
-        </div>
-        <Link href={'#about'} id='#about' className="group relative overflow-hidden rounded-full border-2 border-white px-5 py-[0.8rem] font-[300] mt-4 gap-2 flex items-center text-sm lg:text-xl cursor-pointer transition-all">
-          <span className="absolute bottom-0 left-0 h-48 w-full origin-bottom translate-y-full transform overflow-hidden rounded-full bg-[#7FBF89] transition-all duration-500 ease-out group-hover:translate-y-14"></span>
-          <span className="font-semibold text-white z-10">View my work</span>
-          <span className="z-10"><FaLongArrowAltRight /></span>
+        <Link href={'#about'} id='#about' className="mt-6">
+          <ShinyButton>
+            View my work
+            <span className="ml-2 inline-flex"><FaLongArrowAltRight /></span>
+          </ShinyButton>
         </Link>
       </div>
     </div>

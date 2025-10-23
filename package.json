@@ -11,12 +11,12 @@
   "dependencies": {
     "@react-email/components": "^0.0.12",
     "@react-email/tailwind": "^0.0.13",
-    "@react-three/drei": "^9.88.7",
-    "@react-three/fiber": "^8.15.8",
     "apexcharts": "^3.44.2",
+    "clsx": "^2.1.1",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.482.0",
     "maath": "^0.10.4",
+    "motion": "^12.23.24",
     "next": "13.5.6",
     "plaiceholder": "^3.0.0",
     "react": "^18",
@@ -30,7 +30,7 @@
     "react-skills": "^1.27.0",
     "regraph": "^0.0.1",
     "resend": "^2.0.0",
-    "three": "^0.158.0"
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@types/node": "^20",

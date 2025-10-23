@@ -3,6 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark theme as default */
+:root {
+  --bg-primary: #0f0f10;
+  --bg-secondary: #0d0d0f;
+  --bg-tertiary: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: #e5e7eb;
+  --text-accent: #d4a574;
+  --text-accent-secondary: #c49b6a;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme removed */
+
 
 
 .ts-bg {
@@ -10,4 +29,22 @@
     mix-blend-mode: luminosity;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
     backdrop-filter: blur(67.957046px);
+}
+
+@keyframes meteor {
+    0% {
+        transform: rotate(215deg) translateX(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(215deg) translateX(-500px);
+        opacity: 0;
+    }
+}
+
+.animate-meteor-effect {
+    animation: meteor linear infinite;
 }
