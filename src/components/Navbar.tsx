@@ -9,7 +9,6 @@ import Image from "next/image";
 import MobileNav from "./MobileNav";
 import { Alex_Brush } from "next/font/google";
 import AnimatedBackgroundTabs from "./AnimatedBackgroundTabs";
-import BorderTrail from "./BorderTrail";
 
 const alexBrush = Alex_Brush({ 
     subsets: ["latin"],
@@ -119,8 +118,7 @@ function NavbarScroll() {
         variants={NavAnimations}
         className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block"
       >
-        <div className="relative inline-flex items-center justify-between px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/20 min-w-[800px]">
-          <BorderTrail size={80} />
+        <div className="inline-flex items-center justify-between px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/20 min-w-[800px]">
           {/* Logo */}
           <a href="/" className="flex flex-row items-center">
             <span className={`${alexBrush.className} text-2xl font-bold text-gray-300 hover:text-white transition-colors duration-200`}>

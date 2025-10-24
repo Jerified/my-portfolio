@@ -10,7 +10,7 @@ const DATA: TreeNode = {
   children: [
     { id: "2", name: "profile", children: [ { id: "3", name: "name: Jeremiah" }, { id: "4", name: "role: Full‑Stack Dev" }, { id: "5", name: "location: Lagos, Nigeria" } ] },
     { id: "6", name: "experience", children: [ { id: "7", name: "5+ yrs • Web Dev" }, { id: "8", name: "4+ yrs • React/Next" }, { id: "9", name: "3+ yrs • Full‑Stack" } ] },
-    { id: "10", name: "skills", children: [ { id: "11", name: "TS • React • Node" }, { id: "12", name: "DB • APIs • Cloud" }, { id: "13", name: "Docker • Git • Testing" } ] },
+    { id: "10", name: "skills", children: [ { id: "11", name: "TS • React • Node" }, { id: "12", name: "DB • APIs • Cloud" }, { id: "13", name: "Docker • Git • Testing" }, { id: "18", name: "Claude • AI • Copilot" } ] },
     { id: "14", name: "interests", children: [ { id: "15", name: "⚽ Football fanatic" }, { id: "16", name: "🎮 CODM player" }, { id: "17", name: "💻 Code enthusiast" } ] },
   ],
 };

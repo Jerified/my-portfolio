@@ -75,7 +75,18 @@ export default function MobileNav() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: -20, scale: 0.95 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
-                            className="absolute top-full left-0 right-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg shadow-black/20 overflow-hidden"
+                            className="absolute top-full left-0 right-0 mt-2 backdrop-blur-xl border border-white/30 rounded-xl shadow-2xl shadow-black/40 overflow-hidden"
+                            style={{
+                                background: `
+                                    radial-gradient(circle at 20% 50%, rgba(255, 126, 95, 0.15) 0%, transparent 50%),
+                                    radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.12) 0%, transparent 50%),
+                                    radial-gradient(circle at 40% 80%, rgba(196, 155, 106, 0.1) 0%, transparent 50%),
+                                    linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(15, 15, 16, 0.9) 100%)
+                                `,
+                                backgroundSize: '400px 400px, 300px 300px, 500px 500px, 100% 100%',
+                                backgroundPosition: '0% 0%, 100% 0%, 50% 100%, 0% 0%',
+                                animation: 'noise 20s infinite linear'
+                            }}
                         >
                             <div className="p-4 space-y-3">
                                 <motion.a
@@ -92,7 +103,7 @@ export default function MobileNav() {
                                     whileHover={{ x: 4 }}
                                     onClick={() => setMobileNav(false)}
                                 >
-                                    Projects
+                                        Projects
                                 </motion.a>
                                 <motion.a
                                     href="#contact"
@@ -100,7 +111,7 @@ export default function MobileNav() {
                                     whileHover={{ x: 4 }}
                                     onClick={() => setMobileNav(false)}
                                 >
-                                    Contact
+                                        Contact
                                 </motion.a>
                                 <div className="border-t border-white/20 my-3"></div>
                                 <motion.div
@@ -117,7 +128,7 @@ export default function MobileNav() {
                                     </Link>
                                 </motion.div>
                             </div>
-                        </motion.div>
+                            </motion.div>
                     )}
                 </AnimatePresence>
             </nav>

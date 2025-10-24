@@ -18,11 +18,14 @@
   --text-accent: #d4a574;
   --text-accent-secondary: #c49b6a;
   --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* Magic UI required variables */
+  --background: #0f0f10;
+  --foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 /* Light theme removed */
-
-
 
 .ts-bg {
     background: #7FBF89;
@@ -47,4 +50,70 @@
 
 .animate-meteor-effect {
     animation: meteor linear infinite;
+}
+
+@keyframes noise {
+    0% {
+        background-position: 0% 0%, 100% 0%, 50% 100%, 0% 0%;
+    }
+    25% {
+        background-position: 25% 25%, 75% 25%, 25% 75%, 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%, 50% 50%, 50% 50%, 0% 0%;
+    }
+    75% {
+        background-position: 75% 25%, 25% 75%, 75% 25%, 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%;
+    }
+}
+
+@layer base {
+  .theme {
+    --animate-shine: shine var(--duration) infinite linear;
+    --animate-background-position-spin: background-position-spin 3000ms infinite alternate;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+}
+
+@theme inline {
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
+  @keyframes background-position-spin {
+  0% {
+    background-position: top center;
+    }
+  100% {
+    background-position: bottom center;
+    }
+  }
 }
