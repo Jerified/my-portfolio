@@ -25,14 +25,29 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex justify-center pt-10 gap-7">
-            <Link href={'https://github.com/Jerified'} target='_blank' className='bg-[#ff7e5f]/20 rounded-md p-3'>
-                <TbBrandGithub className='text-white text-lg lg:text-2xl' />
+            <Link 
+              href={'https://github.com/Jerified'} 
+              target='_blank' 
+              className='group relative bg-gray-800/20 rounded-md p-3 transition-all duration-300 hover:bg-gray-800/40 hover:scale-110 hover:shadow-lg hover:shadow-gray-800/30 hover:-translate-y-1'
+            >
+                <TbBrandGithub className='text-white text-lg lg:text-2xl transition-all duration-300 group-hover:text-gray-300 group-hover:scale-110' />
+                <div className="absolute inset-0 rounded-md bg-gradient-to-r from-gray-800/10 to-gray-700/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
-            <Link href={'https://twitter.com/Jeremiah4life11'} target='_blank' className='bg-[#ff7e5f]/20 rounded-md p-3'>
-                <BsTwitterX className='text-white text-lg lg:text-2xl' />
+            <Link 
+              href={'https://twitter.com/Jeremiah4life11'} 
+              target='_blank' 
+              className='group relative bg-black/20 rounded-md p-3 transition-all duration-300 hover:bg-black/40 hover:scale-110 hover:shadow-lg hover:shadow-black/30 hover:-translate-y-1'
+            >
+                <BsTwitterX className='text-white text-lg lg:text-2xl transition-all duration-300 group-hover:text-gray-300 group-hover:scale-110' />
+                <div className="absolute inset-0 rounded-md bg-gradient-to-r from-black/10 to-gray-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
-            <Link href={'https://www.linkedin.com/in/Jerrified'} target='_blank' className='bg-[#ff7e5f]/20 rounded-md p-3'>
-                <FaLinkedinIn className='text-white text-lg lg:text-2xl' />
+            <Link 
+              href={'https://www.linkedin.com/in/Jerrified'} 
+              target='_blank' 
+              className='group relative bg-blue-600/20 rounded-md p-3 transition-all duration-300 hover:bg-blue-600/40 hover:scale-110 hover:shadow-lg hover:shadow-blue-600/30 hover:-translate-y-1'
+            >
+                <FaLinkedinIn className='text-white text-lg lg:text-2xl transition-all duration-300 group-hover:text-blue-300 group-hover:scale-110' />
+                <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-600/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             {/* <Link href={'https://github.com/Jerified'} className='bg-[#2c5282] p-3'>
                 <TbBrandGithub className='text-white text-3xl' />

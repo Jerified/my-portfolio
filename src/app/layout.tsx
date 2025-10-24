@@ -11,16 +11,80 @@ import { LightRays } from "@/components/LightRays";
 import TransitionOverlay from "@/components/TransitionOverlay";
 import ShaderLikeBackground from "@/components/ShaderLikeBackground";
 import { CustomCursor } from "@/components/CustomCursor";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({ 
 subsets: ["latin"] 
 });
 
 export const metadata: Metadata = {
-  title: "Jerrified Portfolio",
-  description: "This is my portfolio",
+  title: "Jeremiah Oyedele - Full Stack Developer | React, Next.js, Node.js Expert",
+  description: "Jeremiah Oyedele is a skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and modern web technologies. Based in Lagos, Nigeria. Available for remote work globally. 5+ years experience in web development.",
+  keywords: [
+    "Jeremiah Oyedele",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer", 
+    "Node.js Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
+    "Web Developer Nigeria",
+    "Remote Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Lagos Developer",
+    "Portfolio",
+    "Web Development Services",
+    "React Expert",
+    "Next.js Expert",
+    "Node.js Expert"
+  ],
+  authors: [{ name: "Jeremiah Oyedele" }],
+  creator: "Jeremiah Oyedele",
+  publisher: "Jeremiah Oyedele",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://findjerrified.vercel.app',
+    siteName: 'Jeremiah Oyedele Portfolio',
+    title: 'Jeremiah Oyedele - Full Stack Developer | React, Next.js, Node.js Expert',
+    description: 'Jeremiah Oyedele is a skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and modern web technologies. Based in Lagos, Nigeria. Available for remote work globally.',
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Jeremiah Oyedele - Full Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jeremiah Oyedele - Full Stack Developer',
+    description: 'Skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript. Available for remote work globally.',
+    creator: '@Jeremiah4life11',
+    images: ['/profile.jpg'],
+  },
+  alternates: {
+    canonical: 'https://findjerrified.vercel.app',
+  },
+  category: 'technology',
+  classification: 'Portfolio Website',
+  other: {
+    'google-site-verification': 'PrFeO_OfwCmkQFeWysrqm2RugqrOFz8O_qkVqRgbydg',
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -28,6 +92,9 @@ export default function RootLayout({
 }) { 
   return (
     <html lang="en" className='!scroll-smooth'>
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${inter.className} bg-[#0f0f10] dark:bg-[#0f0f10] overflow-x-hidden transition-colors duration-300`}
       >
