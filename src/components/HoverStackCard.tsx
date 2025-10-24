@@ -6,7 +6,6 @@ interface HoverStackCardProps {
   title: string
   description: string
   icon: React.ReactNode
-  href?: string
   isDark?: boolean
   className?: string
 }
@@ -15,12 +14,38 @@ export const HoverStackCard: React.FC<HoverStackCardProps> = ({
   title,
   description,
   icon,
-  href = '#',
   isDark = false,
   className = ''
 }) => {
   const [isHovered, setIsHovered] = useState(false)
   const highlightColor = isDark ? '#d4a574' : '#feb47b'
+  
+  const cardStyle = {
+    padding: '24px',
+    textDecoration: 'none',
+    color: isDark ? '#e5e7eb' : '#1a1a1a',
+    backgroundColor: isDark ? '#1a1a1a' : '#d4a574',
+    borderColor: isHovered ? highlightColor : (isDark ? '#d4a574' : '#b8860b'),
+    borderRadius: '12px',
+    transform: isHovered ? 'translate(-15px, -15px)' : 'translate(0px, 0px)',
+    transitionDelay: '100ms',
+    background: isDark 
+      ? `
+        linear-gradient(135deg, #1a1a1a 0%, #0f0f10 100%),
+        radial-gradient(circle at 30% 40%, rgba(212, 165, 116, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(196, 155, 106, 0.04) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(212, 165, 116, 0.03) 25%, transparent 25%, transparent 75%, rgba(212, 165, 116, 0.03) 75%),
+        linear-gradient(-45deg, rgba(196, 155, 106, 0.02) 25%, transparent 25%, transparent 75%, rgba(196, 155, 106, 0.02) 75%)
+      `
+      : `
+        linear-gradient(135deg, #d4a574 0%, #c49b6a 100%),
+        radial-gradient(circle at 30% 40%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(184, 134, 11, 0.08) 25%, transparent 25%, transparent 75%, rgba(184, 134, 11, 0.08) 75%),
+        linear-gradient(-45deg, rgba(196, 155, 106, 0.06) 25%, transparent 25%, transparent 75%, rgba(196, 155, 106, 0.06) 75%)
+      `,
+    backgroundSize: '100% 100%, 15px 15px, 15px 15px, 8px 8px, 8px 8px'
+  }
   
   return (
     <div className={`card-container flex-[250px] mx-4 my-8 sm:mx-6 sm:my-12 ${className}`}>
@@ -62,35 +87,9 @@ export const HoverStackCard: React.FC<HoverStackCardProps> = ({
         />
         
         {/* Main card - Front layer (follows last) */}
-        <a 
-          href={href}
-          className="block w-full h-[320px] border-2 no-underline relative z-10 transition-all duration-300 ease-out"
-          style={{
-            padding: '24px',
-            textDecoration: 'none',
-            color: isDark ? '#e5e7eb' : '#1a1a1a',
-            backgroundColor: isDark ? '#1a1a1a' : '#d4a574',
-            borderColor: isHovered ? highlightColor : (isDark ? '#d4a574' : '#b8860b'),
-            borderRadius: '12px',
-            transform: isHovered ? 'translate(-15px, -15px)' : 'translate(0px, 0px)',
-            transitionDelay: '100ms',
-            background: isDark 
-              ? `
-                linear-gradient(135deg, #1a1a1a 0%, #0f0f10 100%),
-                radial-gradient(circle at 30% 40%, rgba(212, 165, 116, 0.06) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(196, 155, 106, 0.04) 0%, transparent 50%),
-                linear-gradient(45deg, rgba(212, 165, 116, 0.03) 25%, transparent 25%, transparent 75%, rgba(212, 165, 116, 0.03) 75%),
-                linear-gradient(-45deg, rgba(196, 155, 106, 0.02) 25%, transparent 25%, transparent 75%, rgba(196, 155, 106, 0.02) 75%)
-              `
-              : `
-                linear-gradient(135deg, #d4a574 0%, #c49b6a 100%),
-                radial-gradient(circle at 30% 40%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
-                linear-gradient(45deg, rgba(184, 134, 11, 0.08) 25%, transparent 25%, transparent 75%, rgba(184, 134, 11, 0.08) 75%),
-                linear-gradient(-45deg, rgba(196, 155, 106, 0.06) 25%, transparent 25%, transparent 75%, rgba(196, 155, 106, 0.06) 75%)
-              `,
-            backgroundSize: '100% 100%, 15px 15px, 15px 15px, 8px 8px, 8px 8px'
-          }}
+        <div 
+          className="block w-full h-[320px] border-2 relative z-10 transition-all duration-300 ease-out cursor-default"
+          style={cardStyle}
         >
           {/* Display content - shown by default */}
           <div 
@@ -98,10 +97,10 @@ export const HoverStackCard: React.FC<HoverStackCardProps> = ({
               isHovered ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
-            <div className="text-5xl mb-4 transition-all duration-500 ease-out">
+            <div className="text-5xl mb-4">
               {icon}
             </div>
-            <h2 className="text-xl font-bold text-center transition-all duration-500 ease-out" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+            <h2 className="text-xl font-bold text-center" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               {title}
             </h2>
           </div>
@@ -112,14 +111,14 @@ export const HoverStackCard: React.FC<HoverStackCardProps> = ({
               isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <h2 className="text-xl font-bold mb-3 transition-all duration-500 ease-out" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+            <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               {title}
             </h2>
-            <p className="text-sm leading-relaxed transition-all duration-500 ease-out" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+            <p className="text-sm leading-relaxed" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
               {description}
             </p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   )

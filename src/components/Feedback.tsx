@@ -4,6 +4,7 @@ import { Angry, Check, Frown, Laugh, Loader2, Smile } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { sendEmail } from '@/app/actions/sendEmail'
 
 const feedback = [
   { happiness: 4, emoji: <Laugh size={16} className="stroke-inherit" /> },
@@ -156,27 +157,33 @@ const item = {
 const useSubmitFeedback = () => {
   const [feedback, setFeedback] = useState<{ happiness: number; feedback: string } | null>(null)
   const [isLoading, setLoadingState] = useState(false)
-  //error never happens in case of this mockup btw
   const [error, setError] = useState<{ error: any } | null>(null)
   const [isSent, setRequestState] = useState(false)
-
-  //fake api call
-  const submitFeedback = (feedback: { happiness: number; feedback: string }) =>
-    new Promise((res) => setTimeout(() => res(feedback), 1000))
 
   useEffect(() => {
     if (feedback) {
       setLoadingState(true)
       setRequestState(false)
 
-      submitFeedback(feedback)
-        .then(() => {
-          setRequestState(true)
-          setError(null)
+      // Create FormData for the email action
+      const formData = new FormData()
+      formData.append('senderEmail', 'feedback@portfolio.com')
+      formData.append('senderName', 'Portfolio Feedback')
+      formData.append('message', `Feedback Rating: ${feedback.happiness}/4\n\nMessage: ${feedback.feedback}`)
+
+      sendEmail(formData)
+        .then((result) => {
+          if (result.error) {
+            setError({ error: result.error })
+            setRequestState(false)
+          } else {
+            setRequestState(true)
+            setError(null)
+          }
         })
-        .catch(() => {
+        .catch((err) => {
           setRequestState(false)
-          setError({ error: 'some error' })
+          setError({ error: err.message || 'Failed to send feedback' })
         })
         .finally(() => setLoadingState(false))
     }

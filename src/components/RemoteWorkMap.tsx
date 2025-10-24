@@ -57,33 +57,38 @@ const workLocations = [
 
 export function RemoteWorkMap() {
   return (
-    <div className="relative h-[400px] w-full overflow-hidden rounded-xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl">
+    <div className="relative h-[500px] md:h-[400px] w-full overflow-hidden rounded-xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl">
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-70% from-white/5" />
       <style jsx>{`
         @keyframes dotBlink {
-          0%, 100% { opacity: 0.3; }
+          0%, 100% { opacity: 0.6; }
           50% { opacity: 1; }
         }
         .dotted-map svg circle {
-          animation: dotBlink 2s ease-in-out infinite;
+          animation: dotBlink 1.5s ease-in-out infinite;
+          stroke: #feb47b;
+          stroke-width: 1;
         }
         .dotted-map svg circle:nth-child(odd) {
-          animation-delay: 0.5s;
+          animation-delay: 0.3s;
         }
         .dotted-map svg circle:nth-child(3n) {
-          animation-delay: 1s;
+          animation-delay: 0.6s;
+        }
+        .dotted-map svg circle:nth-child(4n) {
+          animation-delay: 0.9s;
         }
       `}</style>
       <DottedMap 
         markers={workLocations}
-        dotColor="#d4a574"
-        markerColor="#feb47b"
-        dotRadius={0.25}
-        width={400}
-        height={200}
+        dotColor="#feb47b"
+        markerColor="#d4a574"
+        dotRadius={0.4}
+        width={600}
+        height={400}
         className="w-full h-full dotted-map"
         style={{
-          filter: 'drop-shadow(0 0 8px rgba(212, 165, 116, 0.3))'
+          filter: 'drop-shadow(0 0 12px rgba(254, 180, 123, 0.6)) brightness(1.2) contrast(1.3)'
         }}
       />
       <div className="absolute bottom-4 left-4">

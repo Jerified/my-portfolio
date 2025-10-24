@@ -123,8 +123,8 @@ function NavbarScroll() {
           <a href="/" className="flex flex-row items-center">
             <span className={`${alexBrush.className} text-2xl font-bold text-gray-300 hover:text-white transition-colors duration-200`}>
               Jerrified<span className='text-[#d4a574]'>Dev</span>
-            </span>
-          </a>
+          </span>
+        </a>
 
           {/* Navigation Links with animated background */}
           <div className="flex items-center">
@@ -146,8 +146,8 @@ function NavbarScroll() {
 
       {/* Mobile & Tablet Navbar */}
       <div className="lg:hidden">
-        <MobileNav />
-      </div>
+            <MobileNav />
+        </div>
     </>
   );
 }
