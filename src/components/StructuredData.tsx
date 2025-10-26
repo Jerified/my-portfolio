@@ -7,7 +7,7 @@ export default function StructuredData() {
     "jobTitle": "Full Stack Developer",
     "description": "Skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and modern web technologies. Based in Lagos, Nigeria. Available for remote work globally.",
     "url": "https://findjerrified.vercel.app",
-    "image": "https://findjerrified.vercel.app/profile.jpg",
+    "image": "https://findjerrified.vercel.app/profile.png",
     "sameAs": [
       "https://github.com/Jerified",
       "https://twitter.com/Jeremiah4life11",

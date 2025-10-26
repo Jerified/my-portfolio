@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: 'Jeremiah Oyedele is a skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and modern web technologies. Based in Lagos, Nigeria. Available for remote work globally.',
     images: [
       {
-        url: '/profile.jpg',
+        url: '/profile.png',
         width: 1200,
         height: 630,
         alt: 'Jeremiah Oyedele - Full Stack Developer',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: 'Jeremiah Oyedele - Full Stack Developer',
     description: 'Skilled Full Stack Developer specializing in React, Next.js, Node.js, TypeScript. Available for remote work globally.',
     creator: '@Jeremiah4life11',
-    images: ['/profile.jpg'],
+    images: ['/profile.png'],
   },
   alternates: {
     canonical: 'https://findjerrified.vercel.app',
