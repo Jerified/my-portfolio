@@ -7,7 +7,7 @@ import { Anton } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
 import { MorphingText } from '@/components/ui/morphing-text';
 import { ComicText } from './ComicText';
-import ShinyButton from './ShinyButton';
+import HeaderStyleButton from './HeaderStyleButton';
 
 const anton = Anton({ 
     subsets: ["latin"],
@@ -54,12 +54,9 @@ const Hero = () => {
             className="uppercase text-[#d4a574] dark:text-[#d4a574] light:text-[#b8860b] text-base sm:text-xl md:text-2xl lg:text-3xl flex items-center justify-center whitespace-nowrap font-normal"
           />
         </div>
-        <Link href={'#about'} id='#about' className="mt-6">
-          <ShinyButton>
-            View my work
-            <span className="ml-2 inline-flex"><FaLongArrowAltRight /></span>
-          </ShinyButton>
-        </Link>
+        <div className="mt-6">
+          <HeaderStyleButton href="#about" label="View my work" />
+        </div>
       </div>
     </div>
   ) 

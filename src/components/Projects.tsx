@@ -107,9 +107,11 @@ const Projects = () => {
                     <h3 className="text-2xl font-bold text-[#ff7e5f]">{project.title}</h3>
                   </div>
                 </div>
-                <p className="bg-gradient-to-br from-[#ff7e5f]/20 to-[#feb47b]/20 backdrop-blur-sm border border-[#ff7e5f]/30 text-sm md:text-base p-2 md:p-6 rounded-md">
-                  {project.description}
-                </p>
+                <div className="w-full">
+                  <div className="rounded-xl p-3 md:p-6 bg-gradient-to-br from-[#ff7e5f]/20 to-[#feb47b]/20 backdrop-blur-sm border border-[#ff7e5f]/30 ring-1 ring-white/10 text-left shadow-[6px_4px_0_rgba(0,0,0,0.55),12px_8px_22px_rgba(0,0,0,0.35)]">
+                    <p className="text-sm md:text-base">{project.description}</p>
+                  </div>
+                </div>
                 <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                   {project.technologies.map((tech, techIndex) => (
                     <li key={techIndex}>{tech}</li>

@@ -41,7 +41,7 @@ const DATA: TreeNode = {
       name: "tools",
       children: [
         { id: "20", name: "Slack • Teams • Discord" },
-        { id: "21", name: "ClickUp • Jira • Notion" },
+        { id: "21", name: "ClickUp • Jira • Slack • Notion" },
         { id: "22", name: "GitHub • Vercel • Docker" },
         { id: "23", name: "Postman • Figma • Swagger" },
       ],
@@ -85,7 +85,16 @@ function Node({ node, depth = 0 }: { node: TreeNode; depth?: number }) {
 
 export default function FileTreeDemo() {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 p-4 shadow-[0_0_40px_0_rgba(255,126,95,0.15)]">
+    <div className="group p-2 rounded-2xl">
+      <div className="relative rounded-2xl ring-1 ring-white/10 p-3 bg-transparent">
+        {/* corner accents */}
+        <span className="absolute -top-1 -left-1 h-3 w-5 -rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+        <span className="absolute -top-1 -right-1 h-3 w-5 rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+        <span className="absolute -bottom-1 -left-1 h-3 w-5 rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+        <span className="absolute -bottom-1 -right-1 h-3 w-5 -rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+
+        {/* inner panel */}
+        <div className="rounded-xl ring-1 ring-white/5 p-4 md:p-5 bg-white/5 shadow-[inset_0_10px_30px_rgba(0,0,0,0.18)]">
       <div className="flex items-center justify-between mb-3">
         <div>
           <div className="text-xs uppercase tracking-widest text-[#feb47b]">
@@ -99,7 +108,9 @@ export default function FileTreeDemo() {
           about
         </span>
       </div>
-      <Node node={DATA} />
+        <Node node={DATA} />
+        </div>
+      </div>
     </div>
   );
 }

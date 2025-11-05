@@ -39,11 +39,11 @@ const Hero = () => {
       </div>
 
       {/* Frontend Highlights */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 mt-20 relative z-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-4 mt-20 relative z-10">
         {[
           { 
             icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-16 h-16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16">
                 <path fill="currentColor" d="M15 22.007H5v-2h10ZM22 4l-4.735 5.955l-.22.27l-5.63 7.19a2.001 2.001 0 1 1-2.83-2.83ZM2.645 7.234A10.84 10.84 0 0 0 1.19 15H2v-1a9.7 9.7 0 0 1 1.69-5.52ZM12 2a10.96 10.96 0 0 0-8.119 3.597L5.025 6.96A7.43 7.43 0 0 1 10 5a7.43 7.43 0 0 1 4.997 1.978l3.55-2.802A10.94 10.94 0 0 0 12 2m6.83 9.2l-.233.287l-.728.93A10 10 0 0 1 18 14v1h4.81a10.88 10.88 0 0 0-1.183-7.318Z"/>
               </svg>
             ), 
@@ -52,7 +52,7 @@ const Hero = () => {
           },
           { 
             icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-16 h-16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16">
                 <g fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" d="M5.143 14A7.8 7.8 0 0 1 4 9.919C4 5.545 7.582 2 12 2s8 3.545 8 7.919A7.8 7.8 0 0 1 18.857 14"/>
                   <path d="M7.383 17.098c-.092-.276-.138-.415-.133-.527a.6.6 0 0 1 .382-.53c.104-.041.25-.041.54-.041h7.656c.291 0 .436 0 .54.04a.6.6 0 0 1 .382.531c.005.112-.041.25-.133.527c-.17.511-.255.767-.386.974a2 2 0 0 1-1.2.869c-.238.059-.506.059-1.043.059h-3.976c-.537 0-.806 0-1.043-.06a2 2 0 0 1-1.2-.868c-.131-.207-.216-.463-.386-.974ZM15 19l-.13.647c-.14.707-.211 1.06-.37 1.34a2 2 0 0 1-1.113.912C13.082 22 12.72 22 12 22s-1.082 0-1.387-.1a2 2 0 0 1-1.113-.913c-.159-.28-.23-.633-.37-1.34L9 19"/>
@@ -65,7 +65,7 @@ const Hero = () => {
           },
           { 
             icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-16 h-16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16">
                 <defs>
                   <path id="SVGbWqObd2e" d="M15 9h8v12h-8z"/>
                 </defs>
@@ -84,7 +84,7 @@ const Hero = () => {
           },
           { 
             icon: (
-              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" className="w-16 h-16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" className="w-12 h-12 md:w-16 md:h-16">
                 <path fill="currentColor" d="M477.64 38.26a4.75 4.75 0 0 0-3.55-3.66c-58.57-14.32-193.9 36.71-267.22 110a317 317 0 0 0-35.63 42.1c-22.61-2-45.22-.33-64.49 8.07C52.38 218.7 36.55 281.14 32.14 308a9.64 9.64 0 0 0 10.55 11.2l87.31-9.63a194 194 0 0 0 1.19 19.7a19.53 19.53 0 0 0 5.7 12L170.7 375a19.6 19.6 0 0 0 12 5.7a194 194 0 0 0 19.59 1.19l-9.58 87.2a9.65 9.65 0 0 0 11.2 10.55c26.81-4.3 89.36-20.13 113.15-74.5c8.4-19.27 10.12-41.77 8.18-64.27a317.7 317.7 0 0 0 42.21-35.64C441 232.05 491.74 99.74 477.64 38.26M294.07 217.93a48 48 0 1 1 67.86 0a47.95 47.95 0 0 1-67.86 0"/>
                 <path fill="currentColor" d="M168.4 399.43c-5.48 5.49-14.27 7.63-24.85 9.46c-23.77 4.05-44.76-16.49-40.49-40.52c1.63-9.11 6.45-21.88 9.45-24.88a4.37 4.37 0 0 0-3.65-7.45a60 60 0 0 0-35.13 17.12C50.22 376.69 48 464 48 464s87.36-2.22 110.87-25.75A59.7 59.7 0 0 0 176 403.09c.37-4.18-4.72-6.67-7.6-3.66"/>
               </svg>
@@ -93,19 +93,30 @@ const Hero = () => {
             desc: 'Engaging and interactive animations' 
           },
         ].map(({ icon, title, desc }, index) => (
-          <MagicCard key={index} className="p-6 text-center group cursor-pointer">
-            <div className="flex flex-col justify-center items-center gap-3">
-              <div className={`text-[#feb47b] transition-all duration-300 ${
-                index === 0 ? 'group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_30px_rgba(255,255,0,0.8)] group-hover:scale-110' : // Fast - Lightning glow
-                index === 1 ? 'group-hover:text-yellow-300 group-hover:drop-shadow-[0_0_25px_rgba(255,255,0,0.7)] group-hover:scale-110 group-hover:animate-pulse' : // Intuitive - Lightbulb turns on
-                index === 2 ? 'group-hover:text-blue-400 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] group-hover:scale-110 group-hover:rotate-12' : // Responsive - Device rotation
-                'group-hover:text-orange-400 group-hover:drop-shadow-[0_0_30px_rgba(255,165,0,0.8)] group-hover:scale-125 group-hover:-translate-y-2 group-hover:animate-bounce' // Dynamic - Rocket boost launch
-              }`}>
-                {icon}
+          <MagicCard key={index} className="group cursor-pointer p-2 rounded-2xl">
+            <div className="relative rounded-2xl ring-1 ring-white/10 p-3 bg-transparent">
+              {/* corner accents */}
+              <span className="absolute -top-1 -left-1 h-3 w-5 -rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+              <span className="absolute -top-1 -right-1 h-3 w-5 rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+              <span className="absolute -bottom-1 -left-1 h-3 w-5 rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+              <span className="absolute -bottom-1 -right-1 h-3 w-5 -rotate-12 bg-transparent rounded-sm border border-[#feb47b]/30" />
+
+              {/* inner panel */}
+              <div className="rounded-xl ring-1 ring-white/5 p-4 md:p-6 text-center bg-transparent shadow-[inset_0_10px_30px_rgba(0,0,0,0.18)]">
+                <div className="flex flex-col justify-center items-center gap-2 md:gap-3">
+                  <div className={`text-[#feb47b] transition-all duration-300 ${
+                    index === 0 ? 'group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_30px_rgba(255,255,0,0.8)] group-hover:scale-110' :
+                    index === 1 ? 'group-hover:text-yellow-300 group-hover:drop-shadow-[0_0_25px_rgba(255,255,0,0.7)] group-hover:scale-110 group-hover:animate-pulse' :
+                    index === 2 ? 'group-hover:text-blue-400 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)] group-hover:scale-110 group-hover:rotate-12' :
+                    'group-hover:text-orange-400 group-hover:drop-shadow-[0_0_30px_rgba(255,165,0,0.8)] group-hover:scale-125 group-hover:-translate-y-2 group-hover:animate-bounce'
+                  }`}>
+                    {icon}
+                  </div>
+                  <h1 className="text-lg md:text-xl font-semibold text-white group-hover:text-[#ff7e5f] transition-colors duration-300">{title}</h1>
+                  <p className="text-xs md:text-sm text-center text-gray-300 font-light group-hover:text-gray-200 transition-colors duration-300">{desc}</p>
+                </div>
+              </div>
             </div>
-              <h1 className="text-xl font-semibold text-white group-hover:text-[#ff7e5f] transition-colors duration-300">{title}</h1>
-          </div>
-            <p className="text-sm text-center pt-2 text-gray-300 font-light group-hover:text-gray-200 transition-colors duration-300">{desc}</p>
           </MagicCard>
         ))}
       </div>
@@ -168,16 +179,16 @@ const Hero = () => {
               />
             </div>
           </div>
-          <h3 className="pt-6 text-2xl font-bold text-white text-center">Who&apos;s this guy?</h3>
+          <h3 className="pt-6 text-2xl font-bold text-white text-center">Meet Jeremiah</h3>
           <p className="text-base lg:text-lg pt-4 text-gray-300 text-center leading-relaxed">
-            I&apos;m a Full-Stack Developer from Lagos, Nigeria.
+            Full‑Stack Developer based in Lagos, building for the web worldwide.
           </p>
           <p className="text-sm lg:text-base pt-3 text-gray-400 text-center leading-relaxed">
-            Passionate about building high-performance applications with seamless user experiences.
+            I craft fast, accessible interfaces and scalable back‑ends that feel effortless to use.
           </p>
           <div className="pt-6 text-center">
             <a href="#contact" className="inline-block text-base lg:text-lg text-[#feb47b] font-semibold cursor-pointer hover:underline transition-all duration-300 hover:text-[#d4a574]">
-              Let&apos;s build something great together!
+              Let&apos;s build something remarkable
             </a>
         </div>
         </MagicCard>

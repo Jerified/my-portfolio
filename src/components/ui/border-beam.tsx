@@ -49,6 +49,10 @@ interface BorderBeamProps {
    * The border width of the beam.
    */
   borderWidth?: number
+  /**
+   * Renders the beam just outside the element border.
+   */
+  outside?: boolean
 }
 
 export const BorderBeam = ({
@@ -63,13 +67,20 @@ export const BorderBeam = ({
   reverse = false,
   initialOffset = 0,
   borderWidth = 1,
+  outside = false,
 }: BorderBeamProps) => {
   return (
     <div
-      className="pointer-events-none absolute inset-0 rounded-[inherit] border-(length:--border-beam-width) border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box]"
+      className="pointer-events-none absolute rounded-[inherit] border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box]"
       style={
         {
           "--border-beam-width": `${borderWidth}px`,
+          borderWidth: borderWidth,
+          borderStyle: "solid",
+          top: outside ? -borderWidth : 0,
+          right: outside ? -borderWidth : 0,
+          bottom: outside ? -borderWidth : 0,
+          left: outside ? -borderWidth : 0,
         } as React.CSSProperties
       }
     >
