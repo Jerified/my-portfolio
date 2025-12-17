@@ -10,7 +10,7 @@ export const projects = [
     description: "Modern e-commerce platform revolutionizing grocery shopping with AI-powered recommendations. Features product browsing, cart management, and seamless checkout. Built with robust authentication, real-time inventory updates, and personalized content generation using OpenAI API.",
     image: "/FeedMe_1.png",
     link: "https://www.shopfeedme.com/",
-    github: "https://github.com/jeremiah4life/feedme",
+    // github: "https://github.com/jeremiah4life/feedme",
     technologies: ["Next.js", "Node.js", "TypeScript", "Supabase"],
     achievements: [
       "Led end-to-end development of FeedMe, improving user engagement by 25% through highly responsive UI and modern architecture",
@@ -79,12 +79,22 @@ export const projects = [
     type: "live"
   },
   {
+    id: "pholio",
+    title: "Pholio",
+    description: "A holistic photography studio website specializing in capturing eternal moments for weddings and events. Features include a portfolio showcase, photographer profiles, and comprehensive service details, all wrapped in a premium, aesthetic design.",
+    image: "/pholio.png",
+    link: "https://pholio-gamma.vercel.app/", 
+    // github: "https://github.com/Jerified/pholio",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+    type: "personal"
+  },
+  {
     id: "loops",
     title: "Loops",
     description: "A comprehensive CRM platform with analytics dashboard, customer management, and revenue tracking. Features include interactive charts, notification systems, and responsive design for optimal user experience across devices.",
     image: "/Loops.png",
-    link: "https://mainstack-mu.vercel.app/", 
-    github: "https://github.com/Jerified/mainstack",
+    link: "https://loops.vercel.app/", 
+    github: "https://github.com/Jerified/loops",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     type: "personal"
   },
