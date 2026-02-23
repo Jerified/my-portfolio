@@ -38,81 +38,87 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/40 backdrop-blur-sm"
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            initial={{ scale: 0.95, opacity: 0, y: 10 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl"
+            exit={{ scale: 0.95, opacity: 0, y: 10 }}
+            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+            className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-[#fafafa] dark:bg-[#121212] border-2 border-slate-800 dark:border-slate-300 shadow-[6px_6px_0_0_#ff7e5f] dark:shadow-[6px_6px_0_0_#ff7e5f] rounded-2xl flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200"
-            >
-              <X className="w-5 h-5 text-white" />
-            </button>
+            {/* Header / Nav */}
+            <div className="sticky top-0 z-20 flex justify-between items-center p-4 border-b-2 border-slate-800 dark:border-slate-700 bg-[#fafafa] dark:bg-[#121212]">
+              <div className="flex space-x-2">
+                <div className="w-3.5 h-3.5 rounded-full border border-slate-800 dark:border-slate-300 bg-[#ff7e5f]" />
+                <div className="w-3.5 h-3.5 rounded-full border border-slate-800 dark:border-slate-300 bg-[#feb47b]" />
+                <div className="w-3.5 h-3.5 rounded-full border border-slate-800 dark:border-slate-300 bg-[#d4a574]" />
+              </div>
+              <button
+                onClick={onClose}
+                className="p-1.5 border-2 border-slate-800 dark:border-slate-300 rounded-lg bg-white dark:bg-slate-800 hover:bg-[#ff7e5f] hover:text-white transition-colors shadow-[2px_2px_0_0_#1e293b] dark:shadow-[2px_2px_0_0_#cbd5e1] hover:translate-y-0.5 hover:translate-x-0.5 hover:shadow-none active:scale-95 text-slate-800 dark:text-slate-200"
+              >
+                <X className="w-5 h-5 font-bold" />
+              </button>
+            </div>
 
-            {/* Header */}
-            <div className="relative p-8 pb-4">
-              <div className="flex flex-col lg:flex-row gap-6">
-                {/* Project Image */}
-                <div className="flex-shrink-0">
-                  <div className="w-full lg:w-80 h-48 lg:h-64 relative rounded-xl overflow-hidden bg-gradient-to-br from-[#feb47b]/20 to-[#d4a574]/20">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
+            {/* Body */}
+            <div className="p-6 md:p-10 flex flex-col gap-8 text-slate-800 dark:text-slate-100">
+              
+              {/* Title & Stats */}
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 space-y-5 w-full">
+                  <div className="inline-flex items-center border-2 border-slate-800 dark:border-slate-500 bg-[#feb47b] text-slate-900 px-3 py-1 font-bold text-xs uppercase tracking-wider shadow-[3px_3px_0_0_#1e293b] dark:shadow-[3px_3px_0_0_#64748b] rounded-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-900 mr-2 animate-pulse"></span>
+                    {project.type === 'live' ? 'Live Project' : 'Personal Project'}
                   </div>
-                </div>
-
-                {/* Project Info */}
-                <div className="flex-1 space-y-4">
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{project.title}</h2>
-                    {project.company && (
-                      <p className="text-xl text-[#d4a574] font-semibold">{project.company}</p>
-                    )}
-                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight break-words text-slate-900 dark:text-white">
+                    {project.title}
+                  </h2>
+                  
+                  {project.company && (
+                    <p className="text-xl font-bold border-l-[4px] border-[#ff7e5f] pl-4 text-slate-700 dark:text-slate-300">
+                      {project.company}
+                    </p>
+                  )}
 
                   {(project.role || project.duration || project.location) && (
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-300">
+                    <div className="flex flex-wrap gap-4 text-sm font-semibold p-4 border-2 border-slate-800 dark:border-slate-600 bg-white dark:bg-[#1a1a1a] shadow-[4px_4px_0_0_#1e293b] dark:shadow-[4px_4px_0_0_#475569] rounded-xl flex-col sm:flex-row">
                       {project.role && (
                         <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4 text-[#feb47b]" />
+                          <Users className="w-4 h-4 text-[#ff7e5f]" />
                           <span>{project.role}</span>
                         </div>
                       )}
                       {project.duration && (
                         <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-[#feb47b]" />
+                          <Calendar className="w-4 h-4 text-[#ff7e5f]" />
                           <span>{project.duration}</span>
                         </div>
                       )}
                       {project.location && (
                         <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 text-[#feb47b]" />
+                          <MapPin className="w-4 h-4 text-[#ff7e5f]" />
                           <span>{project.location}</span>
                         </div>
                       )}
                     </div>
                   )}
 
-                  <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                  <p className="text-base md:text-lg font-medium leading-relaxed">
+                    {project.description}
+                  </p>
 
                   {/* Links */}
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-4 pt-2">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#d4a574] to-[#c49b6a] text-black rounded-lg font-semibold hover:from-[#c49b6a] hover:to-[#d4a574] transition-all duration-300"
+                      className="flex items-center gap-2 px-5 py-2.5 border-2 border-slate-800 dark:border-slate-300 text-slate-900 bg-[#ff7e5f] font-bold shadow-[4px_4px_0_0_#1e293b] hover:shadow-[1px_1px_0_0_#1e293b] dark:shadow-[4px_4px_0_0_#cbd5e1] dark:hover:shadow-[1px_1px_0_0_#cbd5e1] hover:translate-y-[3px] hover:translate-x-[3px] transition-all rounded-lg"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
@@ -122,7 +128,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
+                        className="flex items-center gap-2 px-5 py-2.5 border-2 border-slate-800 dark:border-slate-300 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold shadow-[4px_4px_0_0_#1e293b] hover:shadow-[1px_1px_0_0_#1e293b] dark:shadow-[4px_4px_0_0_#cbd5e1] dark:hover:shadow-[1px_1px_0_0_#cbd5e1] hover:translate-y-[3px] hover:translate-x-[3px] transition-all rounded-lg"
                       >
                         <Github className="w-4 h-4" />
                         GitHub
@@ -130,19 +136,33 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                     )}
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Content */}
-            <div className="px-8 pb-8 space-y-6">
+                {/* Project Image */}
+                <div className="w-full lg:w-[420px] flex-shrink-0">
+                  <div className="relative rounded-xl border-2 border-slate-800 dark:border-slate-600 overflow-hidden shadow-[6px_6px_0_0_#1e293b] dark:shadow-[6px_6px_0_0_#475569] group mt-1 bg-white">
+                    <div className="aspect-video relative w-full h-full">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500 will-change-transform"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Technologies */}
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Technologies Used</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="pt-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 bg-[#ff7e5f] border border-slate-800 rounded-full"></div>
+                  Tech Stack
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-white/10 text-white rounded-full text-sm font-medium"
+                      className="px-3 py-1.5 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-2 border-slate-800 dark:border-slate-600 text-sm font-semibold shadow-[3px_3px_0_0_#1e293b] dark:shadow-[3px_3px_0_0_#475569] hover:-translate-y-0.5 transition-transform rounded-md cursor-default"
                     >
                       {tech}
                     </span>
@@ -150,36 +170,45 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose, project })
                 </div>
               </div>
 
-              {/* What I Did - Only for live projects */}
-              {project.achievements && project.achievements.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">What I Did</h3>
-                  <ul className="space-y-2">
-                    {project.achievements.map((achievement, index) => (
-                      <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <div className="w-2 h-2 bg-[#feb47b] rounded-full mt-2 flex-shrink-0" />
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {/* What I Did & Impact */}
+              {(project.achievements || project.impact) && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
+                  {/* What I Did - Only for live projects */}
+                  {project.achievements && project.achievements.length > 0 && (
+                    <div className="border-2 border-slate-800 dark:border-slate-600 p-6 bg-white dark:bg-[#1a1a1a] shadow-[4px_4px_0_0_#1e293b] dark:shadow-[4px_4px_0_0_#475569] rounded-xl">
+                      <h3 className="text-xl font-bold mb-5 flex items-center gap-2">
+                        What I Did
+                      </h3>
+                      <ul className="space-y-4">
+                        {project.achievements.map((achievement, index) => (
+                          <li key={index} className="flex items-start gap-3 font-medium text-[15px] md:text-base text-slate-700 dark:text-slate-300">
+                            <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-[#feb47b] border-2 border-slate-800 text-slate-900 font-bold shadow-[2px_2px_0_0_#1e293b] rounded-full text-xs mt-0.5">
+                              {index + 1}
+                            </span>
+                            <span className="leading-snug">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
-              {/* Impact - Only for live projects */}
-              {project.impact && project.impact.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-[#feb47b]" />
-                    Impact
-                  </h3>
-                  <ul className="space-y-2">
-                    {project.impact.map((impact, index) => (
-                      <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <div className="w-2 h-2 bg-[#d4a574] rounded-full mt-2 flex-shrink-0" />
-                        <span>{impact}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Impact - Only for live projects */}
+                  {project.impact && project.impact.length > 0 && (
+                    <div className="border-2 border-slate-800 dark:border-slate-600 p-6 bg-gradient-to-br from-[#ff7e5f]/10 to-[#feb47b]/10 dark:from-[#ff7e5f]/5 dark:to-[#feb47b]/5 shadow-[4px_4px_0_0_#1e293b] dark:shadow-[4px_4px_0_0_#475569] rounded-xl">
+                      <h3 className="text-xl font-bold mb-5 flex items-center gap-2">
+                        <TrendingUp className="w-5 h-5 text-[#ff7e5f]" />
+                        Impact
+                      </h3>
+                      <ul className="space-y-4">
+                        {project.impact.map((impact, index) => (
+                          <li key={index} className="flex items-start gap-3 font-medium text-[15px] md:text-base text-slate-700 dark:text-slate-300">
+                            <div className="w-2 h-2 bg-[#ff7e5f] border border-slate-800 rounded-sm mt-1.5 flex-shrink-0 shadow-[1px_1px_0_0_#1e293b]" />
+                            <span className="leading-snug">{impact}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

@@ -79,6 +79,15 @@ export const projects = [
     type: "live"
   },
   {
+    id: "wingage",
+    title: "WinGage",
+    description: "Gamification platform for lead generation and conversion. Allows users to add spin-the-wheel, slot machines, quizzes, and more to their website without coding to boost engagement and capture viral leads.",
+    image: "/wingage.png",
+    link: "https://wingage.vercel.app/",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    type: "personal"
+  },
+  {
     id: "pholio",
     title: "Pholio",
     description: "A holistic photography studio website specializing in capturing eternal moments for weddings and events. Features include a portfolio showcase, photographer profiles, and comprehensive service details, all wrapped in a premium, aesthetic design.",

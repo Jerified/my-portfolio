@@ -23,11 +23,12 @@ export default function CodeComparisonDemo() {
       tag: "Performance",
     },
     {
-      title: "Quizard — Full‑Stack (Next.js, TypeScript, Prisma)",
+      title: "WinGage & Quizard — Full‑Stack (Next.js, TypeScript, PostgreSQL)",
       points: [
-        "Built dynamic quiz application with custom question generation based on topic and difficulty.",
-        "Designed PostgreSQL database for user data, quiz results, and question management.",
-        "Delivered responsive UI with TailwindCSS for seamless desktop and mobile experience.",
+        "Built WinGage, a gamification platform with a custom game engine editor for no-code campaigns, integrating Stripe for multi-tier pricing.",
+        "Developed dynamic Quizard application with custom question generation based on topic and difficulty.",
+        "Designed PostgreSQL database for user data, quiz results, and game configurations.",
+        "Delivered responsive UI with TailwindCSS and Next.js for scalable, high-traffic experiences.",
       ],
       tag: "Full‑Stack",
     },
