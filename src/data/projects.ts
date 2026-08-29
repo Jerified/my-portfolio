@@ -1,6 +1,30 @@
 
 export const projects = [
   {
+    id: "validds",
+    title: "ValidDs",
+    company: "ValidDs",
+    role: "Full-Stack Developer",
+    duration: "01/2025 - Present",
+    location: "Remote",
+    description: "A product validation and decision layer for e-commerce and dropshipping sellers. ValidDs evaluates products using real market evidence, giving every product a clear verdict, a 0–100 opportunity score, reviews, and ad creatives so sellers know before they spend.",
+    image: "/Validds.png",
+    link: "https://www.validds.com/",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Stripe", "Shopify"],
+    achievements: [
+      "Architected the 3-step 'Discover → Validate → Decide' workflow that translates raw market metrics into plain-language verdicts and actionable test plans",
+      "Implemented AI-driven analysis pipelines for automatic product summaries, review sentiment extraction, target audience estimation, and creative hook angles",
+      "Built discovery feeds with advanced intelligence sorting, side-by-side product comparison tools, competitor shop analytics, and watermark-free creative downloads",
+      "Created sleek, responsive dark-mode UI with interactive scoring cards, risk warning badges, and tiered subscription flows with trial billing"
+    ],
+    impact: [
+      "Helped e-commerce sellers avoid losing $150–$500 per test on saturated products by flagging risk signals upfront",
+      "Streamlined decision-making with plain-language verdicts, 0–100 opportunity scores, and concrete testing budgets/angles",
+      "Provided an all-in-one platform replacing raw data research with defensible, validated product decisions"
+    ],
+    type: "live"
+  },
+  {
     id: "feedme",
     title: "FeedMe",
     company: "Seedspike",
