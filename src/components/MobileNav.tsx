@@ -119,8 +119,9 @@ export default function MobileNav() {
                                     className="px-4 py-3"
                                 >
                                     <Link 
-                                        href="/JEREMIAH-OYEDELE-CV.pdf" 
+                                        href="https://docs.google.com/document/d/130tyY-dbYOi8gxirFpIrufPzmBWdSVHpnUP-qsyjsRI/preview" 
                                         target='_blank'
+                                        rel="noopener noreferrer"
                                         className="block w-full px-4 py-2 text-center text-black bg-gradient-to-r from-[#d4a574] to-[#c49b6a] hover:from-[#c49b6a] hover:to-[#d4a574] transition-all duration-300 rounded-lg text-sm font-semibold"
                                         onClick={() => setMobileNav(false)}
                                     >
